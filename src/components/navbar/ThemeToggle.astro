@@ -1,0 +1,71 @@
+---
+import SunIcon from "../icons/SunIcon.astro";
+import MoonIcon from "../icons/MoonIcon.astro";
+---
+
+<div
+  class="inline-flex items-center p-[1px] rounded-3xl bg-logoFontDark dark:bg-zinc-600"
+>
+  <button
+    id="theme-toggle-sun"
+    class="cursor-pointer rounded-3xl p-2"
+    aria-label="Toggle theme"
+  >
+    <SunIcon class="h-6 w-6" />
+  </button>
+  <button
+    id="theme-toggle-moon"
+    class="cursor-pointer rounded-3xl p-2"
+    aria-label="Toggle theme"
+  >
+    <MoonIcon class="h-6 w-6" />
+  </button>
+</div>
+
+<script is:inline>
+  const matchMedia = window.matchMedia("(prefers-color-scheme: dark)");
+
+  const getThemePreference = () => {
+    if (typeof localStorage !== "undefined") {
+      return localStorage.getItem("theme") ?? "system";
+    }
+
+    return window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
+  };
+
+  const btnSun = document.getElementById("theme-toggle-sun");
+  const btnMoon = document.getElementById("theme-toggle-moon");
+
+  function handleButtonClick(clickedButton, otherButton) {
+    clickedButton.classList.add("bg-white", "text-black");
+
+    otherButton.classList.remove("bg-white", "text-black");
+  }
+  btnSun.addEventListener("click", function () {
+    handleButtonClick(btnSun, btnMoon);
+    localStorage.setItem("theme", "light");
+    updateTheme();
+  });
+
+  btnMoon.addEventListener("click", function () {
+    handleButtonClick(btnMoon, btnSun);
+    localStorage.setItem("theme", "dark");
+    updateTheme();
+  });
+
+  const updateTheme = () => {
+    const themePreference = getThemePreference();
+    const isDark =
+      themePreference === "dark" ||
+      (themePreference === "system" && matchMedia.matches);
+
+    btnSun.classList[!isDark ? "add" : "remove"]("bg-white", "text-black");
+    btnMoon.classList[isDark ? "add" : "remove"]("bg-white", "text-black");
+
+    document.documentElement.classList[isDark ? "add" : "remove"]("dark");
+  };
+
+  updateTheme();
+</script>

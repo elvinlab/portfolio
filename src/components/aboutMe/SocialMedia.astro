@@ -1,0 +1,37 @@
+---
+import SocialPill from "../UI/SocialPill.astro";
+import LinkedInIcon from "../icons/LinkedinIcon.astro";
+import GitHubIcon from "../icons/GithubIcon.astro";
+import CvIcon from "../icons/CvIcon.astro";
+
+const social = [
+  {
+    media: "LinkedIn",
+    link: "https://www.linkedin.com/in/elvinlab/",
+    icon: LinkedInIcon,
+  },
+  {
+    media: "Curriculum",
+    link: "https://res.cloudinary.com/dacvhdbn5/image/upload/elvinlab/Elvin_Gonzalez_Gonzalez_CV_ES_aidwd7.pdf",
+    icon: CvIcon,
+  },
+  {
+    media: "GitHub",
+    link: "https://github.com/elvinlab",
+    icon: GitHubIcon,
+  },
+];
+
+const { class: className } = Astro.props;
+---
+
+<nav class={`flex  gap-3 ${className}`}>
+  {
+    social.map((socialItem) => (
+      <SocialPill to={socialItem.link}>
+        <socialItem.icon class="size-4" />
+        {socialItem.media}
+      </SocialPill>
+    ))
+  }
+</nav>

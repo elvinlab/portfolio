@@ -1,0 +1,25 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SectionContainer from "../components/UI/SectionContainer.astro";
+import Hero from "../components/aboutMe/Hero.astro";
+import AboutMe from "../components/aboutMe/AboutMe.astro";
+import ScrollIndicator from "../components/UI/ScrollIndicator.astro";
+---
+
+<Layout title="elvinlab">
+  <SectionContainer
+    class="px-4 z-20 mt-20 md:mt-40 mb-8 flex flex-col justify-start items-center sm:flex-row sm:gap-x-16"
+  >
+    <Hero />
+  </SectionContainer>
+
+  <SectionContainer class="px-4 z-20 pb-22">
+    <AboutMe />
+  </SectionContainer>
+
+  <SectionContainer
+    class="flex mt-5 md:mt-20 flex-col justify-center items-center"
+  >
+    <ScrollIndicator />
+  </SectionContainer>
+</Layout>

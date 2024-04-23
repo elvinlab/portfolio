@@ -1,0 +1,25 @@
+---
+import CopyIcon from "../icons/CopyIcon.astro";
+---
+
+<button
+  id="copy-button"
+  title="copiar Email"
+  aria-label="copiar Email"
+  class="bg-inherit group"
+>
+  <CopyIcon
+    class="opacity-50 group-hover:scale-110 group-hover:opacity-100 transition-all duration-300"
+  />
+</button>
+
+<script>
+  const EMAIL = "elvinlab@outlook.com";
+  const copyButton = document.getElementById("copy-button");
+
+  function copyEmailToClipBoard() {
+    return window.navigator.clipboard.writeText(EMAIL);
+  }
+
+  copyButton?.addEventListener("click", copyEmailToClipBoard);
+</script>

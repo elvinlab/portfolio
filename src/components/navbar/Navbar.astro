@@ -1,0 +1,32 @@
+---
+import LI from "./LI.astro";
+import UL from "./UL.astro";
+import MenuButton from "./MenuButton.astro";
+import LanguageToggle from "./LanguageToggle.astro";
+import ThemeToggle from "./ThemeToggle.astro";
+import { NavItems } from "../../utils/NavItems";
+---
+
+<navbar
+  class="fixed top-0 left-0 w-full h-16 backdrop-blur-sm duration-300 z-[500]"
+>
+  <div class="w-[90%] mx-auto h-full flex justify-center items-center">
+    <a
+      href="/"
+      class="font-protest text-logoFontLight dark:text-logoFontDark text-4xl"
+    >
+      Elvinlab
+    </a>
+    <nav class="w-full flex justify-center items-center gap-4">
+      <UL>
+        {NavItems.map((route) => <LI href={route.path} label={route.title} />)}
+      </UL>
+    </nav>
+
+    <div class="flex justify-center items-center gap-2">
+      <ThemeToggle />
+      <LanguageToggle />
+      <MenuButton />
+    </div>
+  </div>
+</navbar>

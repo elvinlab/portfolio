@@ -1,0 +1,137 @@
+---
+import "../styles/stars.css";
+import "@fontsource/fira-code";
+import "@fontsource/protest-revolution";
+
+import Navbar from "../components/navbar/Navbar.astro";
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="My description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="relative text-textLight dark:text-white">
+    <div
+      class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-neutral-100 dark:bg-neutral-950
+      bg-[radial-gradient(100%_50%_at_50%_0%,rgba(0,163,255,0.13)_0,rgba(0,163,255,0)_50%,rgba(0,163,255,0)_100%)]
+      dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+    >
+    </div>
+
+    <div id="stars" class="relative z-10"></div>
+    <div id="stars2" class="relative z-10"></div>
+    <div id="stars3" class="relative z-10"></div>
+
+    <Navbar />
+    <main class="main">
+      <slot />
+    </main>
+    <div class="invisible sm:visible" id="cursor"></div>
+  </body>
+</html>
+
+<script>
+  // Change color theme
+  const theme = (() => {
+    if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+      return localStorage.getItem("theme");
+    }
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      return "dark";
+    }
+    return "light";
+  })();
+
+  if (theme === "light") {
+    document.documentElement.classList.remove("dark");
+  } else {
+    document.documentElement.classList.add("dark");
+  }
+
+  // Cursor style
+  const cursorEl: HTMLElement = document.querySelector("#cursor")!;
+  const target = { x: 0.5, y: 0.5 };
+  const cursor = { x: 0.5, y: 0.5 };
+  let raf: number | undefined;
+
+  const lerp = (a: number, b: number, speed: number) => {
+    return (1 - speed) * a + speed * b;
+  };
+
+  const update = () => {
+    cursor.x = lerp(cursor.x, target.x, 0.1);
+    cursor.y = lerp(cursor.y, target.y, 0.1);
+    cursorEl?.style.setProperty("--x", `${cursor.x}`);
+    cursorEl?.style.setProperty("--y", `${cursor.y}`);
+
+    const delta = Math.sqrt(
+      Math.pow(target.x - cursor.x, 2) + Math.pow(target.y - cursor.y, 2)
+    );
+
+    if (delta < 0.001) {
+      raf && cancelAnimationFrame(raf);
+      raf = undefined;
+      return;
+    }
+
+    raf = requestAnimationFrame(update);
+  };
+
+  const handleMouseMove = (event: any) => {
+    target.x = event.clientX / window.innerWidth;
+    target.y = event.clientY / window.innerHeight;
+
+    if (!raf) raf = requestAnimationFrame(update);
+  };
+
+  window.addEventListener("mousemove", handleMouseMove);
+  raf = requestAnimationFrame(update);
+  window.removeEventListener("beforeunload", handleMouseMove);
+</script>
+
+<style is:global>
+  :root {
+    color-scheme: light dark;
+  }
+
+  html {
+    font-family: "Fira Code", monospace;
+    scroll-behavior: smooth;
+  }
+  #cursor {
+    --size: 480px;
+    --x: 0;
+    --y: 0;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 100%;
+    transform: translate3d(
+      calc(100vw * var(--x) - (var(--size) / 2)),
+      calc(100vh * var(--y) - var(--size) / 2),
+      0
+    );
+    background: #002f55;
+    opacity: 0.2;
+    filter: blur(80px);
+    box-shadow:
+      inset 0 0 0 3px white,
+      0 0 0 1px black;
+    pointer-events: none;
+    mix-blend-mode: exclusion;
+  }
+</style>
