@@ -11,7 +11,7 @@ const social = [
     icon: LinkedInIcon,
   },
   {
-    media: "Curriculum",
+    media: "Resume",
     link: "https://res.cloudinary.com/dacvhdbn5/image/upload/elvinlab/Elvin_Gonzalez_Gonzalez_CV_ES_aidwd7.pdf",
     icon: CvIcon,
   },
@@ -29,7 +29,7 @@ const { class: className } = Astro.props;
   {
     social.map((socialItem) => (
       <SocialPill to={socialItem.link}>
-        <socialItem.icon class="size-4" />
+        <socialItem.icon class="size-6 mr-1" />
         {socialItem.media}
       </SocialPill>
     ))
