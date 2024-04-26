@@ -22,4 +22,29 @@ import ScrollIndicator from "../components/UI/ScrollIndicator.astro";
   >
     <ScrollIndicator />
   </SectionContainer>
+
+  <SectionContainer class="">
+    <div id="invisibleDiv" class="text-4xl text-center">
+      <p>Sitio en construcción</p>
+      <p>Site under construction</p>
+      <p>😌</p>
+    </div>
+  </SectionContainer>
+  <SectionContainer>
+    <div id="invisibleDiv" class="text-5xl"></div>
+  </SectionContainer>
 </Layout>
+
+<style>
+  #invisibleDiv {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #invisibleDiv p {
+    margin: 10px; /* Espacio alrededor del texto */
+  }
+</style>
