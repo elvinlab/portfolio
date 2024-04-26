@@ -76,6 +76,9 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ${{ env.BUILD_PATH }}/dist
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
 
   deploy:
     environment:
