@@ -17,6 +17,6 @@ export const NavItems = [
   {
     title: "Contacto",
     label: "contacto",
-    path: "mailto:elvinlab@outlook.com",
+    path: "mailto:dev@elvinlab.com",
   },
 ];
