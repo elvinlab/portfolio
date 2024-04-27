@@ -19,4 +19,9 @@ export const NavItems = [
     label: "contacto",
     path: "mailto:dev@elvinlab.com",
   },
+  {
+    title: "Comentarios",
+    label: "Comentarios",
+    path: "/comentarios",
+  },
 ];

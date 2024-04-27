@@ -1,6 +1,6 @@
 ---
-import LI from "./LI.astro";
-import UL from "./UL.astro";
+import NavarList from "./NavarList.astro";
+import NavbarItems from "./NavbarItems.astro";
 import MenuButton from "./MenuButton.astro";
 import LanguageToggle from "./LanguageToggle.astro";
 import ThemeToggle from "./ThemeToggle.astro";
@@ -18,9 +18,13 @@ import { NavItems } from "../../utils/NavItems";
       Elvinlab
     </a>
     <nav class="w-full flex justify-center items-center gap-4">
-      <UL>
-        {NavItems.map((route) => <LI href={route.path} label={route.title} />)}
-      </UL>
+      <NavbarItems>
+        {
+          NavItems.map((route) => (
+            <NavarList href={route.path} label={route.title} />
+          ))
+        }
+      </NavbarItems>
     </nav>
 
     <div class="flex justify-center items-center gap-2">
