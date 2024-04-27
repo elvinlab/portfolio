@@ -1,22 +1,22 @@
 ---
 import Badge from "@/components/UI/Badge.astro";
+import { getI18N } from "@/i18n";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+import { LINKEDIN_LINK, AVATAR_LINK } from "@/consts";
 ---
 
-<img
-  class="size-[150px] mb-5"
-  src="https://hackmd.io/_uploads/rJ24XFNZR.png"
-  alt="Elvin Gonzalez Avatar"
-/>
+<img class="size-[150px] mb-5" src={AVATAR_LINK} alt="Elvin Gonzalez Avatar" />
 
 <div>
   <h1 class="mb-4 text-center text-[21px] md:text-2xl lg:text-4xl">
-    Hola, soy Elvin Gonzalez👋🏼
+    {i18n.ABOUT_ME.SALUTE}
   </h1>
   <div class="flex justify-center sm:justify-start items-center">
     <Badge>
-      <a href="https://www.linkedin.com/in/elvinlab/" target="_blank">
-        #OpenToWork
-      </a>
+      <a href={LINKEDIN_LINK} target="_blank"> #OpenToWork </a>
     </Badge>
   </div>
 </div>

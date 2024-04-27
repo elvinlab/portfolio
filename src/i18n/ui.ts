@@ -1,23 +1,19 @@
 export const languages = {
-  es: 'Español',
-  en: 'English',
+  es: "Español",
+  en: "English",
 };
 
-export const defaultLang = 'es';
+export const defaultLang = "es";
 
 export const ui = {
   es: {
-    'nav.home':'Inicio',
-    'nav.blog':'Blog',
-    'nav.portfolio':'Portafolio',
-    'nav.about':'Sobre mí',
-    'nav.setup':'Mi Setup'
+    "nav.comments.title": "Comentarios",
+    "nav.comments.label": "comentarios",
+    "nav.comments.path": "/comentarios",
   },
   en: {
-    'nav.home':'Home',
-    'nav.blog':'Blog',
-    'nav.portfolio':'Portfolio',
-    'nav.about':'About me',
-    'nav.setup':'My Setup'
+    "nav.comments.title": "Comment",
+    "nav.comments.label": "comment",
+    "nav.comments.path": "/comment",
   },
 } as const;

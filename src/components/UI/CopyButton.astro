@@ -1,11 +1,15 @@
 ---
 import CopyIcon from "@/components/icons/CopyIcon.astro";
+import { getI18N } from "@/i18n";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 ---
 
 <button
   id="copy-button"
-  title="copiar Email"
-  aria-label="copiar Email"
+  title={i18n.BUTTONS.COPY_BUTTON_LABEL_TILE}
+  aria-label={i18n.BUTTONS.COPY_BUTTON_LABEL_TILE}
   class="bg-inherit group"
 >
   <CopyIcon

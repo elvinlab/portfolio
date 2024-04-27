@@ -1,6 +1,7 @@
 ---
 import CopyButton from "@/components/UI/CopyButton.astro";
 import SendIcon from "@/components/icons/SendIcon.astro";
+import { EMAIL } from "@/consts";
 ---
 
 <div
@@ -9,14 +10,14 @@ import SendIcon from "@/components/icons/SendIcon.astro";
   <input
     class="text-[#bbbbbb] min-w-[85%] bg-transparent text-center text-xl"
     disabled
-    value="dev@elvinlab.com"
-    placeholder="dev@elvinlab.com"
+    value={EMAIL}
+    placeholder={EMAIL}
   />
   <CopyButton />
   <a
     title="Elvin Gonzalez"
     aria-label="Elvin Gonzalez"
-    href="mailto:dev@elvinlab.com"
+    href={`mailto:${EMAIL}`}
     class="bg-inherit py-3.5 rounded-md group"
   >
     <SendIcon

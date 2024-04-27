@@ -4,20 +4,27 @@ import LinkedInIcon from "@/components/icons/LinkedinIcon.astro";
 import GitHubIcon from "@/components/icons/GithubIcon.astro";
 import CvIcon from "@/components/icons/CvIcon.astro";
 
+import { getI18N } from "@/i18n";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+import { LINKEDIN_LINK, RESUME_ES_LINK, GITHUB_LINK } from "@/consts";
+
 const social = [
   {
     media: "LinkedIn",
-    link: "https://www.linkedin.com/in/elvinlab/",
+    link: LINKEDIN_LINK,
     icon: LinkedInIcon,
   },
   {
-    media: "Resume",
-    link: "https://drive.google.com/file/d/1cDn7LvYyJjKAf6_APg4S8DCt-HQ2oq9j/view",
+    media: i18n.BUTTONS.RESUME,
+    link: currentLocale === "es" ? RESUME_ES_LINK : RESUME_ES_LINK,
     icon: CvIcon,
   },
   {
     media: "GitHub",
-    link: "https://github.com/elvinlab",
+    link: GITHUB_LINK,
     icon: GitHubIcon,
   },
 ];

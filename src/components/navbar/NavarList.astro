@@ -2,15 +2,14 @@
 interface Props {
   href: string;
   label: string;
-  icon?: HTMLElement;
+  title: string;
 }
 
-const { href, label, icon: Icon } = Astro.props;
+const { href, label, title } = Astro.props;
 ---
 
 <li>
-  <a href={href} class="px-2 hover:underline">
-    {Icon && Icon}
-    {label}
+  <a href={href} aria-label={label} class="px-2 hover:underline">
+    {title}
   </a>
 </li>

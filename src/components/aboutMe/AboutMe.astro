@@ -1,20 +1,20 @@
 ---
 import SocialMedia from "@/components/aboutMe/SocialMedia.astro";
 import EmailContact from "@/components/aboutMe/EmailContact.astro";
+import { getI18N } from "@/i18n";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 ---
 
 <div class="text-center md:mb-11">
   <h2 class="text-xl lg:text-2xl text-balance text-black dark:text-white">
-    <span
-      >Desarrollador de Software con +3 años de experiencia en proyectos de alto
-      impacto y análisis de datos.</span
-    >
+    <span> {i18n.ABOUT_ME.TEXT_SECTION_1}</span>
     <span class="text-yellow-800 dark:text-yellow-200">
-      Especializado en ETL, optimización de rendimiento y seguridad.
+      {i18n.ABOUT_ME.TEXT_SECTION_2}
     </span>
     <span class="text-red-800 dark:text-red-200">
-      Apasionado por la colaboración y la implementación de tecnologías
-      innovadoras para resolver desafíos complejos.
+      {i18n.ABOUT_ME.TEXT_SECTION_3}
     </span>
   </h2>
 </div>
