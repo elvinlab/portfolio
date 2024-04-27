@@ -1,5 +1,10 @@
 ---
-import Language from "../icons/LanguageIcon.astro";
+import Language from "@/components/icons/LanguageIcon.astro";
+import { languages } from "@/i18n/ui";
+import { getLangFromUrl, useTranslatedPath } from "@/i18n/utils.ts";
+
+const lang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(lang);
 ---
 
 <div class="relative inline-block text-left">
