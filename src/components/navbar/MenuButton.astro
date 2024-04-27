@@ -1,6 +1,15 @@
 ---
-import Burguer from "../icons/BurgerIcon.astro";
-import { NavItems } from "../../utils/NavItems";
+import Burguer from "@/components/icons/BurgerIcon.astro";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils.ts";
+
+import { getI18N } from "@/i18n";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <div class="relative inline-block text-left lg:hidden">
@@ -12,15 +21,26 @@ import { NavItems } from "../../utils/NavItems";
   <ul
     class="hidden absolute right-0 z-10 mt-2 origin-top-right rounded-md border border-zinc-400 dark:border-zinc-700 bg-orange-50 dark:bg-zinc-800 shadow-xl ring-1 ring-black ring-opacity-5 focus:outline-none divide-zinc-400 dark:divide-zinc-700 hidden-menu"
   >
-    {
-      NavItems.map((route) => (
-        <li>
-          <a href="/" class="block px-4 py-2 text-sm hover:underline">
-            {route.title}
+    <li>
+      {
+        i18n.NAVBAR.map((route) => (
+          <a
+            href={route.PATH}
+            aria-label={route.LABEL}
+            class="block px-4 py-2 text-sm hover:underline"
+          >
+            {route.TITLE}
           </a>
-        </li>
-      ))
-    }
+        ))
+      }
+      <a
+        class="block px-4 py-2 text-sm hover:underline"
+        href={getRelativeLocaleUrl(currentLocale ?? "", t("nav.comments.path"))}
+        aria-label={t("nav.comments.label")}
+      >
+        {t("nav.comments.title")}
+      </a>
+    </li>
   </ul>
 </div>
 

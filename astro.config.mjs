@@ -6,4 +6,14 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [tailwind()],
   site: 'https://elvinlab.com/',
+  i18n: {
+    defaultLocale: 'es',
+    locales: ['es', 'en'],
+    routing: {
+      prefixDefaultLocale: false
+    },
+    fallback: {
+      en: 'es'
+    }
+  }
 });

@@ -1,20 +1,20 @@
 ---
-import SocialMedia from "./SocialMedia.astro";
-import EmailContact from "./EmailContact.astro";
+import SocialMedia from "@/components/aboutMe/SocialMedia.astro";
+import EmailContact from "@/components/aboutMe/EmailContact.astro";
+import { getI18N } from "@/i18n";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 ---
 
 <div class="text-center md:mb-11">
   <h2 class="text-xl lg:text-2xl text-balance text-black dark:text-white">
-    <span
-      >Ingeniero en Sistemas de la Información con más de 3 años de experiencia
-      en desarrollo de software y análisis de datos.</span
-    >
+    <span> {i18n.ABOUT_ME.TEXT_SECTION_1}</span>
     <span class="text-yellow-800 dark:text-yellow-200">
-      Habilidades destacadas en pensamiento crítico, resolución de problemas,
-      trabajo en equipo y liderazgo.
+      {i18n.ABOUT_ME.TEXT_SECTION_2}
     </span>
     <span class="text-red-800 dark:text-red-200">
-      Experto en optimización y mantenimiento de aplicaciones.
+      {i18n.ABOUT_ME.TEXT_SECTION_3}
     </span>
   </h2>
 </div>

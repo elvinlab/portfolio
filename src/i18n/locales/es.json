@@ -1,0 +1,34 @@
+{
+  "NAVBAR": [
+    {
+      "TITLE": "Experiencia",
+      "LABEL": "experiencia",
+      "PATH": "/#experiencia"
+    },
+    {
+      "TITLE": "Proyectos",
+      "LABEL": "proyectos",
+      "PATH": "/#proyectos"
+    },
+    {
+      "TITLE": "Sobre mí",
+      "LABEL": "sobre-mi",
+      "PATH": "/#sobre-mi"
+    },
+    {
+      "TITLE": "Contacto",
+      "LABEL": "contacto",
+      "PATH": "mailto:dev@elvinlab.com"
+    }
+  ],
+  "ABOUT_ME": {
+    "SALUTE": "Hola, soy Elvin Gonzalez",
+    "TEXT_SECTION_1": "Desarrollador de Software con +3 años de experiencia en proyectos de alto impacto y análisis de datos.",
+    "TEXT_SECTION_2": "Especializado en ETL, optimización de rendimiento y seguridad.",
+    "TEXT_SECTION_3": "Apasionado por la colaboración y la implementación de tecnologías innovadoras para resolver desafíos complejos."
+  },
+  "BUTTONS": {
+    "RESUME": "RESUME",
+    "COPY_BUTTON_LABEL_TILE": "Copiar Email"
+  }
+}

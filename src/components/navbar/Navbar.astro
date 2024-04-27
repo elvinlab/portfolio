@@ -1,10 +1,18 @@
 ---
-import LI from "./LI.astro";
-import UL from "./UL.astro";
-import MenuButton from "./MenuButton.astro";
-import LanguageToggle from "./LanguageToggle.astro";
-import ThemeToggle from "./ThemeToggle.astro";
-import { NavItems } from "../../utils/NavItems";
+import NavarList from "@/components/navbar/NavarList.astro";
+import NavbarItems from "@/components/navbar/NavbarItems.astro";
+import MenuButton from "@/components/navbar/MenuButton.astro";
+import LanguageToggle from "@/components/navbar/LanguageToggle.astro";
+import ThemeToggle from "@/components/navbar/ThemeToggle.astro";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils.ts";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import { getI18N } from "@/i18n";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <navbar
@@ -18,9 +26,25 @@ import { NavItems } from "../../utils/NavItems";
       Elvinlab
     </a>
     <nav class="w-full flex justify-center items-center gap-4">
-      <UL>
-        {NavItems.map((route) => <LI href={route.path} label={route.title} />)}
-      </UL>
+      <NavbarItems>
+        {
+          i18n.NAVBAR.map((route) => (
+            <NavarList
+              href={route.PATH}
+              label={route.LABEL}
+              title={route.TITLE}
+            />
+          ))
+        }
+        <NavarList
+          href={getRelativeLocaleUrl(
+            currentLocale ?? "",
+            t("nav.comments.path")
+          )}
+          label={t("nav.comments.label")}
+          title={t("nav.comments.title")}
+        />
+      </NavbarItems>
     </nav>
 
     <div class="flex justify-center items-center gap-2">
