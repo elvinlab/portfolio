@@ -1,6 +1,6 @@
 ---
 import Burguer from "@/components/icons/BurgerIcon.astro";
-import { getRelativeLocaleUrl } from "astro:i18n";
+//import { getRelativeLocaleUrl } from "astro:i18n";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils.ts";
 
 import { getI18N } from "@/i18n";
@@ -33,13 +33,21 @@ const t = useTranslations(lang);
           </a>
         ))
       }
-      <a
+
+      <button
+        class="block px-4 py-2 text-sm hover:underline"
+        aria-label={t("nav.comments.label")}
+      >
+        {t("nav.comments.title")}
+      </button>
+
+      <!-- <a
         class="block px-4 py-2 text-sm hover:underline"
         href={getRelativeLocaleUrl(currentLocale ?? "", t("nav.comments.path"))}
         aria-label={t("nav.comments.label")}
       >
         {t("nav.comments.title")}
-      </a>
+      </a> -->
     </li>
   </ul>
 </div>

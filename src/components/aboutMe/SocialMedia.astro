@@ -9,7 +9,12 @@ import { getI18N } from "@/i18n";
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
 
-import { LINKEDIN_LINK, RESUME_ES_LINK, GITHUB_LINK } from "@/consts";
+import {
+  LINKEDIN_LINK,
+  RESUME_ES_LINK,
+  RESUME_EN_LINK,
+  GITHUB_LINK,
+} from "@/consts";
 
 const social = [
   {
@@ -19,7 +24,7 @@ const social = [
   },
   {
     media: i18n.BUTTONS.RESUME,
-    link: currentLocale === "es" ? RESUME_ES_LINK : RESUME_ES_LINK,
+    link: currentLocale === "es" ? RESUME_ES_LINK : RESUME_EN_LINK,
     icon: CvIcon,
   },
   {
