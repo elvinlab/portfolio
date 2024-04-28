@@ -4,6 +4,7 @@ export const EMAIL = "dev@elvinlab.com";
 export const AVATAR_LINK = "https://hackmd.io/_uploads/rJ24XFNZR.png";
 export const LINKEDIN_LINK = "https://www.linkedin.com/in/elvinlab/";
 export const RESUME_ES_LINK =
-  "https://drive.google.com/file/d/1cDn7LvYyJjKAf6_APg4S8DCt-HQ2oq9j/view";
-
+  "https://drive.google.com/file/d/1W1e7tGAeaOTp80ke3I9-5hUbUGfEiE84/view?usp=drive_link";
+export const RESUME_EN_LINK =
+  "https://drive.google.com/file/d/1Y9Qmr5sk4iTJIRB-IXkdE9E-V3yRa5aO/view?usp=drive_link";
 export const GITHUB_LINK = "https://github.com/elvinlab";

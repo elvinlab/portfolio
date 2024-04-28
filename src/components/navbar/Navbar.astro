@@ -7,6 +7,7 @@ import ThemeToggle from "@/components/navbar/ThemeToggle.astro";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils.ts";
 import { getRelativeLocaleUrl } from "astro:i18n";
 import { getI18N } from "@/i18n";
+import Notification from "../UI/Notification.astro";
 
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
@@ -15,6 +16,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
+<Notification msg="Próximamente 🚀" />
 <navbar
   class="fixed top-0 left-0 w-full h-16 backdrop-blur-sm duration-300 z-[500] border-b border-logoFontLight dark:border-logoFontDark"
 >
@@ -36,14 +38,24 @@ const t = useTranslations(lang);
             />
           ))
         }
-        <NavarList
+        <li>
+          <button
+            id="btn-comment"
+            class="px-2 hover:underline"
+            aria-label={t("nav.comments.label")}
+          >
+            {t("nav.comments.title")}
+          </button>
+        </li>
+
+        <!-- <NavarList
           href={getRelativeLocaleUrl(
             currentLocale ?? "",
             t("nav.comments.path")
           )}
           label={t("nav.comments.label")}
           title={t("nav.comments.title")}
-        />
+        /> -->
       </NavbarItems>
     </nav>
 
@@ -54,3 +66,18 @@ const t = useTranslations(lang);
     </div>
   </div>
 </navbar>
+<script is:inline>
+  const btnComment = document.getElementById("btn-comment");
+  const btnNotificationFromNavbar = document.getElementById("btn-notification");
+
+  btnComment.addEventListener("click", function () {
+    btnNotificationFromNavbar.classList.toggle(
+      "hidden",
+      !btnNotificationFromNavbar.classList.contains("hidden")
+    );
+
+    setTimeout(() => {
+      btnNotificationFromNavbar.classList.toggle("hidden", true);
+    }, 3000);
+  });
+</script>

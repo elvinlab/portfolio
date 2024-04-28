@@ -22,13 +22,13 @@
     }
   ],
   "ABOUT_ME": {
-    "SALUTE": "Hola, soy Elvin Gonzalez",
+    "SALUTE": "Hola, soy Elvin Gonzalez 👋🏽",
     "TEXT_SECTION_1": "Desarrollador de Software con +3 años de experiencia en proyectos de alto impacto y análisis de datos.",
     "TEXT_SECTION_2": "Especializado en ETL, optimización de rendimiento y seguridad.",
     "TEXT_SECTION_3": "Apasionado por la colaboración y la implementación de tecnologías innovadoras para resolver desafíos complejos."
   },
   "BUTTONS": {
-    "RESUME": "RESUME",
+    "RESUME": "Currículo",
     "COPY_BUTTON_LABEL_TILE": "Copiar Email"
   }
 }
