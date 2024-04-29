@@ -29,6 +29,8 @@
   },
   "BUTTONS": {
     "RESUME": "Currículo",
-    "COPY_BUTTON_LABEL_TILE": "Copiar Email"
+    "COPY_BUTTON_LABEL_TILE": "Copiar Email",
+    "COPY_BUTTON_NOTIFICATION": "¡Copiado!",
+    "UPDATES": "Próximamente 🚀"
   }
 }

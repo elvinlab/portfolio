@@ -7,7 +7,7 @@ const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
 ---
 
-<div class="text-center md:mb-11">
+<div class="text-center mb-8">
   <h2 class="text-xl lg:text-xl text-balance text-black dark:text-white">
     <span> {i18n.ABOUT_ME.TEXT_SECTION_1}</span>
     <span class="text-yellow-800 dark:text-yellow-200">
@@ -19,6 +19,6 @@ const i18n = getI18N({ currentLocale });
   </h2>
 </div>
 <div class="flex flex-col justify-center items-center">
-  <SocialMedia class="mt-6" />
-  <EmailContact class="mt-6" />
+  <SocialMedia />
+  <EmailContact />
 </div>

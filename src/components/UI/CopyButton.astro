@@ -1,11 +1,16 @@
 ---
 import CopyIcon from "@/components/icons/CopyIcon.astro";
 import { getI18N } from "@/i18n";
+import Notification from "./Notification.astro";
 
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
 ---
 
+<Notification
+  id="notification-copy-btn"
+  msg={i18n.BUTTONS.COPY_BUTTON_NOTIFICATION}
+/>
 <button
   id="copy-button"
   title={i18n.BUTTONS.COPY_BUTTON_LABEL_TILE}
@@ -17,11 +22,23 @@ const i18n = getI18N({ currentLocale });
   />
 </button>
 
-<script>
+<script is:inline>
   const EMAIL = "dev@elvinlab.com";
   const copyButton = document.getElementById("copy-button");
+  const btnNotificationFromCopyBtn = document.getElementById(
+    "notification-copy-btn"
+  );
 
   function copyEmailToClipBoard() {
+    btnNotificationFromCopyBtn.classList.toggle(
+      "hidden",
+      !btnNotificationFromCopyBtn.classList.contains("hidden")
+    );
+
+    setTimeout(() => {
+      btnNotificationFromCopyBtn.classList.toggle("hidden", true);
+    }, 3000);
+
     return window.navigator.clipboard.writeText(EMAIL);
   }
 

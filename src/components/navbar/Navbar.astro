@@ -16,7 +16,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<Notification msg="Próximamente 🚀" />
+<Notification id="notification-next" msg={i18n.BUTTONS.UPDATES} />
 <navbar
   class="fixed top-0 left-0 w-full h-16 backdrop-blur-sm duration-300 z-[500] border-b border-logoFontLight dark:border-logoFontDark"
 >
@@ -68,7 +68,8 @@ const t = useTranslations(lang);
 </navbar>
 <script is:inline>
   const btnComment = document.getElementById("btn-comment");
-  const btnNotificationFromNavbar = document.getElementById("btn-notification");
+  const btnNotificationFromNavbar =
+    document.getElementById("notification-next");
 
   btnComment.addEventListener("click", function () {
     btnNotificationFromNavbar.classList.toggle(

@@ -37,11 +37,11 @@ const social = [
 const { class: className } = Astro.props;
 ---
 
-<nav class={`flex  gap-3 ${className}`}>
+<nav class={`flex  items-center ${className}`}>
   {
     social.map((socialItem) => (
       <SocialPill to={socialItem.link}>
-        <socialItem.icon class="size-6 mr-1" />
+        <socialItem.icon class="size-5 mr-1" />
         {socialItem.media}
       </SocialPill>
     ))
