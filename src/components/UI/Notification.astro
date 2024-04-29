@@ -1,13 +1,14 @@
 ---
 interface Props {
+  id: string;
   msg: string;
 }
 
-const { msg } = Astro.props;
+const { id, msg } = Astro.props;
 ---
 
-<button
-  id="btn-notification"
+<span
+  id={id}
   class="hidden max-w-s fixed m-4 lg:right-5 top-20 p-3 rounded-md border border-zinc-400 dark:border-zinc-700 bg-orange-50 dark:bg-zinc-800 shadow-xl ring-1 ring-black ring-opacity-5 focus:outline-none divide-zinc-400 dark:divide-zinc-700 transition duration-300"
 >
   <span class="relative h-3 w-3">
@@ -18,4 +19,4 @@ const { msg } = Astro.props;
     ></span>
   </span>
   <span class="text-md">{msg}</span>
-</button>
+</span>

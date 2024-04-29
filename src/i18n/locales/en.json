@@ -23,12 +23,14 @@
   ],
   "ABOUT_ME": {
     "SALUTE": "Hi, I'm Elvin Gonzalez 👋🏽",
-    "TEXT_SECTION_1": "Software Developer with +3 years of experience in high impact projects and data analysis. and data analysis projects.",
+    "TEXT_SECTION_1": "Software Developer with +3 years of experience in high-impact projects and data analysis.",
     "TEXT_SECTION_2": "Specializing in ETL, performance optimization and security.",
     "TEXT_SECTION_3": "Passionate about collaboration and implementing innovative technologies to solve complex challenges."
   },
   "BUTTONS": {
     "RESUME": "Resume",
-    "COPY_BUTTON_LABEL_TILE": "Copy Email"
+    "COPY_BUTTON_LABEL_TILE": "Copy Email",
+    "COPY_BUTTON_NOTIFICATION": "Copy!",
+    "UPDATES": "Soon 🚀"
   }
 }
