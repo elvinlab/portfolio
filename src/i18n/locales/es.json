@@ -1,6 +1,11 @@
 {
   "NAVBAR": [
     {
+      "TITLE": "Inicio",
+      "LABEL": "Inicio",
+      "PATH": "/#inicio"
+    },
+    {
       "TITLE": "Experiencia",
       "LABEL": "experiencia",
       "PATH": "/#experiencia"
@@ -23,14 +28,46 @@
   ],
   "ABOUT_ME": {
     "SALUTE": "Hola, soy Elvin Gonzalez 👋🏽",
-    "TEXT_SECTION_1": "Desarrollador de Software con +3 años de experiencia en proyectos de alto impacto y análisis de datos.",
-    "TEXT_SECTION_2": "Especializado en ETL, optimización de rendimiento y seguridad.",
-    "TEXT_SECTION_3": "Apasionado por la colaboración y la implementación de tecnologías innovadoras para resolver desafíos complejos."
+    "TEXT_SECTION_1": "Desarrollador de Software con más de 3 años de experiencia en proyectos de alto impacto y análisis de datos.",
+    "TEXT_SECTION_2": "Especializado en la extracción, transformación y carga de datos (ETL), optimización de rendimiento y aseguramiento de la seguridad de aplicaciones.",
+    "TEXT_SECTION_3": "Apasionado encolaboración con equipos multidisciplinarios y en la implementación de tecnologías de vanguardia para resolver problemas complejos de manera eficiente y efectiva."
+  },
+  "TILES": {
+    "EXPERIENCE": "Experiencia laboral",
+    "COMPANY_LINK": "Saber más"
   },
   "BUTTONS": {
     "RESUME": "Currículo",
     "COPY_BUTTON_LABEL_TILE": "Copiar Email",
     "COPY_BUTTON_NOTIFICATION": "¡Copiado!",
     "UPDATES": "Próximamente 🚀"
-  }
+  },
+  "EXPERIENCE": [
+    {
+      "COMPANY": "Blue Zone Consulting Partners",
+      "POSITION": "Software Developer",
+      "DATE": "Abr 2022 - Presente",
+      "DESCRIPTION": "Como parte del equipo, me encargaba de extraer y transformar datos desde Excel para almacenarlos en AWS S3, asegurando su integridad y seguridad. Supervisé el proceso, documenté el código y trabajé en la visualización de datos para hacerlos comprensibles y atractivos. Además, colaboré con mis colegas para cumplir con los objetivos comerciales, brindando capacitación y apoyo a nuevos empleados en tareas complejas. Utilicé mi experiencia en Java y AngularJS para optimizar el rendimiento y obtener datos de API Rest.",
+      "LINK": "https://www.linkedin.com/company/blue-zone-consulting-partners/"
+    },
+    {
+      "COMPANY": "CNET Technology Systems",
+      "POSITION": "Programador - Desarrollador full-stack",
+      "DATE": "Jun 2021 - Mar 2022",
+      "DESCRIPTION": "Me encargué del análisis, diseño y desarrollo de software utilizando .Net Framework y ReactJS. Implementé estándares de seguridad, lideré proyectos y gestioné clientes para garantizar la calidad. También me ocupé de la documentación, normalización de bases de datos, transformación de datos y capacitación de usuarios. Enfoqué en la selección de tecnologías óptimas y gestioné roles en sistemas administrativos.",
+      "LINK": "https://www.linkedin.com/company/cnet-technology-system/"
+    },
+    {
+      "COMPANY": "Hacienda el Orosi",
+      "POSITION": "Programador - Desarrollador de software",
+      "DATE": "Oct 2020 - Jun 2021",
+      "DESCRIPTION": "Dirigí proyectos y equipos de desarrollo, desde el análisis hasta la implementación. Utilicé servicios en la nube como Firebase y AWS S3 Bucket, y el stack MERN. Optimicé el manejo de archivos multimedia y gestioné errores en Github. Aseguré la seguridad y funcionalidad del software con pruebas de calidad. Implementé un módulo de contabilidad y capacité a usuarios. Establecí CI/CD y documenté procesos."
+    },
+    {
+      "COMPANY": "Julio Celulares",
+      "POSITION": "Técnico de soporte",
+      "DATE": "Abr 2015 - May 2017",
+      "DESCRIPTION": "Brindé soporte técnico completo para equipos informáticos y móviles, resolviendo problemas de manera efectiva y garantizando la satisfacción del cliente. Manejé consultas, quejas y solicitudes de manera profesional y amigable, logrando altos niveles de satisfacción. Además, gestioné transacciones financieras con precisión como cajero y demostré habilidades de comunicación efectiva, construyendo relaciones sólidas y generando confianza en la marca."
+    }
+  ]
 }
