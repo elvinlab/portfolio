@@ -46,20 +46,24 @@
     {
       "COMPANY": "Blue Zone Consulting Partners",
       "POSITION": "Software Developer",
-      "DATE": "Abr 2022 - Presente",
+      "DATE": "Apr 2022 - Apr 2024",
       "DESCRIPTION": "Como parte del equipo, me encargaba de extraer y transformar datos desde Excel para almacenarlos en AWS S3, asegurando su integridad y seguridad. Supervisé el proceso, documenté el código y trabajé en la visualización de datos para hacerlos comprensibles y atractivos. Además, colaboré con mis colegas para cumplir con los objetivos comerciales, brindando capacitación y apoyo a nuevos empleados en tareas complejas. Utilicé mi experiencia en Java y AngularJS para optimizar el rendimiento y obtener datos de API Rest.",
-      "LINK": "https://www.linkedin.com/company/blue-zone-consulting-partners/"
+      "LINK": "https://www.linkedin.com/company/blue-zone-consulting-partners/",
+      "IMG_LINK": "https://hackmd.io/_uploads/H1oPyZxfA.jpg",
+      "ALT_TEXT": "Blue Zone Consulting Partners Imagen"
     },
     {
       "COMPANY": "CNET Technology Systems",
-      "POSITION": "Programador - Desarrollador full-stack",
+      "POSITION": "Desarrollador full-stack",
       "DATE": "Jun 2021 - Mar 2022",
       "DESCRIPTION": "Me encargué del análisis, diseño y desarrollo de software utilizando .Net Framework y ReactJS. Implementé estándares de seguridad, lideré proyectos y gestioné clientes para garantizar la calidad. También me ocupé de la documentación, normalización de bases de datos, transformación de datos y capacitación de usuarios. Enfoqué en la selección de tecnologías óptimas y gestioné roles en sistemas administrativos.",
-      "LINK": "https://www.linkedin.com/company/cnet-technology-system/"
+      "LINK": "https://www.linkedin.com/company/cnet-technology-system/",
+      "IMG_LINK": "https://hackmd.io/_uploads/Hk3PkbgGR.jpg",
+      "ALT_TEXT": "CNET Technology Systems Imagen"
     },
     {
       "COMPANY": "Hacienda el Orosi",
-      "POSITION": "Programador - Desarrollador de software",
+      "POSITION": "Desarrollador de software",
       "DATE": "Oct 2020 - Jun 2021",
       "DESCRIPTION": "Dirigí proyectos y equipos de desarrollo, desde el análisis hasta la implementación. Utilicé servicios en la nube como Firebase y AWS S3 Bucket, y el stack MERN. Optimicé el manejo de archivos multimedia y gestioné errores en Github. Aseguré la seguridad y funcionalidad del software con pruebas de calidad. Implementé un módulo de contabilidad y capacité a usuarios. Establecí CI/CD y documenté procesos."
     },
