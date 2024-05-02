@@ -1,16 +1,11 @@
 ---
 import CopyIcon from "@/components/icons/CopyIcon.astro";
 import { getI18N } from "@/i18n";
-import Notification from "./Notification.astro";
 
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
 ---
 
-<Notification
-  id="notification-copy-btn"
-  msg={i18n.BUTTONS.COPY_BUTTON_NOTIFICATION}
-/>
 <button
   id="copy-button"
   title={i18n.BUTTONS.COPY_BUTTON_LABEL_TILE}

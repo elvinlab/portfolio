@@ -1,5 +1,6 @@
 ---
-import LinkInline from "@/components/UI/LinkInline.astro";
+import LinkInline from "@/components/experience/LinkInline.astro";
+import { AVATAR_LINK } from "@/consts";
 import { getI18N } from "@/i18n";
 
 const { currentLocale } = Astro;
@@ -11,27 +12,39 @@ interface Props {
   DATE: string;
   DESCRIPTION: string;
   LINK?: string;
+  IMG_LINK?: string;
+  ALT_TEXT?: string;
 }
 
-const { COMPANY, POSITION, DATE, DESCRIPTION, LINK } = Astro.props;
+const { COMPANY, POSITION, DATE, DESCRIPTION, LINK, IMG_LINK, ALT_TEXT } =
+  Astro.props;
 ---
 
 <div
-  class="relative mx-12 pb-12 before:absolute before:left-[-35px] before:block before:h-full before:border-l-8 before:border-black/20 dark:before:border-white/15 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]"
+  class="relative grid mx-12 pb-12 before:absolute before:left-[-40px] before:block before:h-full before:border-l-8 before:border-black/20 dark:before:border-white/15 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]"
 >
   <div class="relative pb-12 md:col-span-2">
     <div class="sticky top-0">
-      <span class="text-yellow-500 -left-[60px] absolute rounded-full text-8xl"
+      <span class="text-yellow-500 -left-[64px] absolute rounded-full text-8xl"
         >&bull;</span
       >
 
       <h3 class="text-xl font-bold text-yellow-500">{COMPANY}</h3>
-      <h4 class="font-semibold text-xl text-gray-600 dark:text-white italic">
+      <h4 class="font-semibold text-md text-gray-600 dark:text-white italic">
         {POSITION}
       </h4>
       <time class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80"
         >{DATE}</time
       >
+      {
+        IMG_LINK && ALT_TEXT && (
+          <img
+            class="size-[180px] mt-2 rounded-md mx-auto shadow-xl shadow-amber-100"
+            src={IMG_LINK}
+            alt={ALT_TEXT}
+          />
+        )
+      }
     </div>
   </div>
   <div

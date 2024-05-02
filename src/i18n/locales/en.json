@@ -46,16 +46,20 @@
     {
       "COMPANY": "Blue Zone Consulting Partners",
       "POSITION": "Software Developer",
-      "DATE": "Apr 2022 - Present",
+      "DATE": "Apr 2022 - Apr 2024",
       "DESCRIPTION": "As part of the team, I was responsible for extracting and transforming data from Excel to store it in AWS S3, ensuring its integrity and security. I supervised the process, documented the code, and worked on data visualization to make it understandable and appealing. Additionally, I collaborated with my colleagues to meet business objectives, providing training and support to new employees in complex tasks. I utilized my experience in Java and AngularJS to optimize performance and obtain data from Restful APIs.",
-      "LINK": "https://www.linkedin.com/company/blue-zone-consulting-partners/"
+      "LINK": "https://www.linkedin.com/company/blue-zone-consulting-partners/",
+      "IMG_LINK": "https://hackmd.io/_uploads/H1oPyZxfA.jpg",
+      "ALT_TEXT": "Blue Zone Consulting Partners Image"
     },
     {
       "COMPANY": "CNET Technology Systems",
       "POSITION": "Full-stack Developer",
       "DATE": "Jun 2021 - Mar 2022",
       "DESCRIPTION": "I was responsible for the analysis, design, and development of software using .Net Framework and ReactJS. I implemented security standards, led projects, and managed clients to ensure quality. I also handled documentation, database normalization, data transformation, and user training. I focused on selecting optimal technologies and managed roles in administrative systems.",
-      "LINK": "https://www.linkedin.com/company/cnet-technology-system/"
+      "LINK": "https://www.linkedin.com/company/cnet-technology-system/",
+      "IMG_LINK": "https://hackmd.io/_uploads/Hk3PkbgGR.jpg",
+      "ALT_TEXT": "CNET Technology Systems Image"
     },
     {
       "COMPANY": "Hacienda el Orosi",
