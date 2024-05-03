@@ -1,0 +1,68 @@
+---
+import CloseIcon from "../icons/CloseIcon.astro";
+import Carousel from "./Carousel.astro";
+import { getI18N } from "@/i18n";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+interface Props {
+  imgs: {
+    LINK: string;
+    ALT: string;
+  }[];
+}
+
+const { imgs } = Astro.props;
+---
+
+<dialog
+  id="projectModal"
+  class="h-auto w-11/12 md:w-1/2 bg-transparent rounded-md"
+>
+  <div class="flex flex-col w-full">
+    <div class="flex w-full h-auto justify-center items-center">
+      <div
+        class="flex w-10/12 h-auto py-3 justify-center items-center text-2xl font-bold"
+      >
+        {i18n.TILES.DEMONSTRATIONS}
+      </div>
+      <div
+        onclick="document.getElementById('projectModal').close();"
+        class="flex w-1/12 h-auto justify-center cursor-pointer"
+      >
+        <CloseIcon class="h-12 w-12" />
+      </div>
+    </div>
+
+    <div>
+      <Carousel imgs={imgs} />
+    </div>
+  </div>
+</dialog>
+<style>
+  dialog[open] {
+    animation: appear 0.15s cubic-bezier(0, 1.8, 1, 1.8);
+  }
+
+  dialog::backdrop {
+    background: linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(54, 54, 54, 0.5)
+    );
+    backdrop-filter: blur(3px);
+  }
+
+  @keyframes appear {
+    from {
+      opacity: 0;
+      transform: translateX(-3rem);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+</style>

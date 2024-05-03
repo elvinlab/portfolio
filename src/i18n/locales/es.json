@@ -34,7 +34,9 @@
   },
   "TILES": {
     "EXPERIENCE": "Experiencia laboral",
-    "COMPANY_LINK": "Saber más"
+    "COMPANY_LINK": "Saber más",
+    "LAST_PROJECTS": "Últimos proyectos",
+    "DEMONSTRATIONS": "Demostraciónes"
   },
   "BUTTONS": {
     "RESUME": "Currículo",
@@ -49,7 +51,7 @@
       "DATE": "Apr 2022 - Apr 2024",
       "DESCRIPTION": "Como parte del equipo, me encargaba de extraer y transformar datos desde Excel para almacenarlos en AWS S3, asegurando su integridad y seguridad. Supervisé el proceso, documenté el código y trabajé en la visualización de datos para hacerlos comprensibles y atractivos. Además, colaboré con mis colegas para cumplir con los objetivos comerciales, brindando capacitación y apoyo a nuevos empleados en tareas complejas. Utilicé mi experiencia en Java y AngularJS para optimizar el rendimiento y obtener datos de API Rest.",
       "LINK": "https://www.linkedin.com/company/blue-zone-consulting-partners/",
-      "IMG_LINK": "https://hackmd.io/_uploads/H1oPyZxfA.jpg",
+      "IMG_LINK": "/imgs/experience/bz-img.webp",
       "ALT_TEXT": "Blue Zone Consulting Partners Imagen"
     },
     {
@@ -58,7 +60,7 @@
       "DATE": "Jun 2021 - Mar 2022",
       "DESCRIPTION": "Me encargué del análisis, diseño y desarrollo de software utilizando .Net Framework y ReactJS. Implementé estándares de seguridad, lideré proyectos y gestioné clientes para garantizar la calidad. También me ocupé de la documentación, normalización de bases de datos, transformación de datos y capacitación de usuarios. Enfoqué en la selección de tecnologías óptimas y gestioné roles en sistemas administrativos.",
       "LINK": "https://www.linkedin.com/company/cnet-technology-system/",
-      "IMG_LINK": "https://hackmd.io/_uploads/Hk3PkbgGR.jpg",
+      "IMG_LINK": "/imgs/experience/cnet-img.webp",
       "ALT_TEXT": "CNET Technology Systems Imagen"
     },
     {
@@ -73,5 +75,42 @@
       "DATE": "Abr 2015 - May 2017",
       "DESCRIPTION": "Brindé soporte técnico completo para equipos informáticos y móviles, resolviendo problemas de manera efectiva y garantizando la satisfacción del cliente. Manejé consultas, quejas y solicitudes de manera profesional y amigable, logrando altos niveles de satisfacción. Además, gestioné transacciones financieras con precisión como cajero y demostré habilidades de comunicación efectiva, construyendo relaciones sólidas y generando confianza en la marca."
     }
-  ]
+  ],
+  "PROJECTS": {
+    "HACIENDA": {
+      "TITLE": "Hacienda el Orosi",
+      "DESCRIPTION": "Se desarrolló un proyecto interno para una empresa ganadera, abarcando la gestión integral de pagos, colaboradores, préstamos, herramientas, animales, facturación y ventas. Utilizando tecnologías como React, TailwindCSS, Express.JS y MongoDB, se creó una plataforma eficiente y escalable que simplifica las operaciones diarias y potencia la toma de decisiones estratégicas.",
+      "LINK": null,
+      "IMGS": [
+        {
+          "LINK": "/imgs/projects/hacienda-main.webp",
+          "ALT": "imagen demostrativa principal"
+        },
+        {
+          "LINK": "/imgs/projects/hacienda-1.webp",
+          "ALT": "imagen demostrativa 1"
+        },
+        {
+          "LINK": "/imgs/projects/hacienda-2.webp",
+          "ALT": "imagen demostrativa 2"
+        },
+        {
+          "LINK": "/imgs/projects/hacienda-3.webp",
+          "ALT": "imagen demostrativa 3"
+        },
+        {
+          "LINK": "/imgs/projects/hacienda-4.webp",
+          "ALT": "imagen demostrativa 4"
+        },
+        {
+          "LINK": "/imgs/projects/hacienda-5.webp",
+          "ALT": "imagen demostrativa 5"
+        },
+        {
+          "LINK": "/imgs/projects/hacienda-6.webp",
+          "ALT": "imagen demostrativa 6"
+        }
+      ]
+    }
+  }
 }
