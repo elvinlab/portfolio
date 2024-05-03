@@ -7,28 +7,29 @@ const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
 
 interface Props {
+  id: string;
   imgs: {
     LINK: string;
     ALT: string;
   }[];
 }
 
-const { imgs } = Astro.props;
+const { id, imgs } = Astro.props;
 ---
 
 <dialog
-  id="projectModal"
+  id={`projectModal-${id}`}
   class="h-auto w-11/12 md:w-1/2 bg-transparent rounded-md"
 >
   <div class="flex flex-col w-full">
     <div class="flex w-full h-auto justify-center items-center">
       <div
-        class="flex w-10/12 h-auto py-3 justify-center items-center text-2xl font-bold"
+        class="flex w-10/12 h-auto py-3 justify-center items-center text-xl font-bold"
       >
         {i18n.TILES.DEMONSTRATIONS}
       </div>
       <div
-        onclick="document.getElementById('projectModal').close();"
+        onclick={`document.getElementById('projectModal-${id}').close();`}
         class="flex w-1/12 h-auto justify-center cursor-pointer"
       >
         <CloseIcon class="h-12 w-12" />

@@ -78,37 +78,58 @@
   ],
   "PROJECTS": {
     "HACIENDA": {
+      "ID": "Hacienda",
       "TITLE": "Hacienda el Orosi",
       "DESCRIPTION": "An internal project was developed for a livestock company, encompassing comprehensive management of payments, employees, loans, tools, animals, billing, and sales. Utilizing technologies such as React, TailwindCSS, Express.JS, and MongoDB, an efficient and scalable platform was created, simplifying daily operations and empowering strategic decision-making.",
       "LINK": null,
       "IMGS": [
         {
           "LINK": "/imgs/projects/hacienda-main.webp",
-          "ALT": "demonstration image main"
+          "ALT": "Hacienda image main"
         },
         {
           "LINK": "/imgs/projects/hacienda-1.webp",
-          "ALT": "demonstration image 1"
+          "ALT": "Hacienda image 1"
         },
         {
           "LINK": "/imgs/projects/hacienda-2.webp",
-          "ALT": "demonstration image 2"
+          "ALT": "Hacienda image 2"
         },
         {
           "LINK": "/imgs/projects/hacienda-3.webp",
-          "ALT": "demonstration image 3"
+          "ALT": "Hacienda image 3"
         },
         {
           "LINK": "/imgs/projects/hacienda-4.webp",
-          "ALT": "demonstration image 4"
+          "ALT": "Hacienda image 4"
         },
         {
           "LINK": "/imgs/projects/hacienda-5.webp",
-          "ALT": "demonstration image 5"
+          "ALT": "Hacienda image 5"
         },
         {
           "LINK": "/imgs/projects/hacienda-6.webp",
-          "ALT": "demonstration image 6"
+          "ALT": "Hacienda image 6"
+        }
+      ]
+    },
+    "SPOTIFY": {
+      "ID": "open-spotify",
+      "TITLE": "Open Spotify",
+      "DESCRIPTION": "The creation of a React clone project was undertaken with the main goal of deepening understanding and mastery of the Next.js framework, in combination with the capabilities of React and the versatility of Tailwind CSS. This initiative not only allowed for exploration of the features and capabilities of these cutting-edge technologies, but also facilitated a better understanding of their interactions and how they can be leveraged in the development of modern and efficient web applications.",
+      "LINK": null,
+      "IMGS": [
+        {
+          "LINK": "/imgs/projects/open-spotify-main.webp",
+          "ALT": "image Open Spotify principal"
+        },
+        {
+          "LINK": "/imgs/projects/open-spotify-1.webp",
+          "ALT": "image pen Spotify 1"
+        },
+        {
+          "LINK": "/imgs/projects/open-spotify-2.webp",
+          "ALT": "image pen Spotify 2"
         }
       ]
     }

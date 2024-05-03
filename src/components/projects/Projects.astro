@@ -18,7 +18,7 @@ const i18n = getI18N({ currentLocale });
 const TAGS = {
   NEXT: {
     name: "Next.js",
-    class: "bg-black text-white",
+    class: "bg-[#0d151d] text-white",
     icon: NextJSIcon,
   },
   TAILWIND: {
@@ -49,6 +49,7 @@ const TAGS = {
 };
 const PROJECTS = [
   {
+    id: i18n.PROJECTS.HACIENDA.ID,
     title: i18n.PROJECTS.HACIENDA.LINK,
     description: i18n.PROJECTS.HACIENDA.DESCRIPTION,
     link: null,
@@ -56,6 +57,15 @@ const PROJECTS = [
     image: "/imgs/projects/hacienda-main.webp",
     tags: [TAGS.TAILWIND, TAGS.REACT, TAGS.MATERIAL, TAGS.MONGODB, TAGS.NODE],
     imgs: i18n.PROJECTS.HACIENDA.IMGS,
+  },
+  {
+    id: i18n.PROJECTS.SPOTIFY.ID,
+    description: i18n.PROJECTS.SPOTIFY.DESCRIPTION,
+    link: "https://open-spotify-plum.vercel.app/",
+    github: "https://github.com/elvinlab/open-spotify",
+    image: "/imgs/projects/open-spotify-main.webp",
+    tags: [TAGS.TAILWIND, TAGS.REACT, TAGS.MONGODB, TAGS.NEXT],
+    imgs: i18n.PROJECTS.SPOTIFY.IMGS,
   },
 ];
 ---
@@ -69,57 +79,59 @@ const PROJECTS = [
 
 <div class="flex flex-col gap-y-16">
   {
-    PROJECTS.map(({ image, title, description, tags, link, github, imgs }) => (
-      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-        <Modal imgs={imgs} />
-        <div class="w-full md:w-1/2">
-          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-            <img
-              onclick="document.getElementById('projectModal').showModal();"
-              alt="Recién llegado vs 5 años en Nueva Zelanda"
-              class="object-cover object-top w-full h-48 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105 cursor-pointer"
-              loading="lazy"
-              src={image}
-            />
-          </div>
-        </div>
-        <div class="w-full md:w-1/2 md:max-w-lg">
-          <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
-            {title}
-          </h3>
-          <div class="flex flex-wrap mt-2">
-            <div class="mt-2 text-gray-600 dark:text-gray-300">
-              {description}
+    PROJECTS.map(
+      ({ image, title, description, tags, link, github, imgs, id }) => (
+        <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+          <Modal id={id} imgs={imgs} />
+          <div class="w-full md:w-1/2">
+            <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+              <img
+                onclick={`document.getElementById('projectModal-${id}').showModal();`}
+                alt="Recién llegado vs 5 años en Nueva Zelanda"
+                class="object-cover object-top w-full h-48 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105 cursor-pointer"
+                loading="lazy"
+                src={image}
+              />
             </div>
-            <ul class=" mt-4 flex flex-wrap gap-x-2 gap-y-1 flex-row mb-2">
-              {tags.map((tag) => (
-                <li>
-                  <span
-                    class={`flex gap-x-2  rounded-full text-xs ${tag.class} text-nowrap py-1 px-2 `}
-                  >
-                    <tag.icon class="size-4" />
-                    {tag.name}
-                  </span>
-                </li>
-              ))}
-            </ul>
-            <footer class="flex items-end justify-start mt-4 gap-x-4">
-              {github && (
-                <LinkButton href={github}>
-                  <GitHubAltIcon class="size-6" />
-                  Code
-                </LinkButton>
-              )}
-              {link && (
-                <LinkButton href={link}>
-                  <LinkIcon class="size-4" />
-                  Demo
-                </LinkButton>
-              )}
-            </footer>
           </div>
-        </div>
-      </article>
-    ))
+          <div class="w-full md:w-1/2 md:max-w-lg">
+            <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+              {title}
+            </h3>
+            <div class="flex flex-wrap mt-2">
+              <div class="mt-2 text-gray-600 dark:text-gray-300">
+                {description}
+              </div>
+              <ul class="mt-4 flex flex-wrap gap-x-2 gap-y-1 flex-row mb-2">
+                {tags.map((tag) => (
+                  <li>
+                    <span
+                      class={`flex gap-x-2  rounded-full text-xs ${tag.class} text-nowrap py-1 px-2 `}
+                    >
+                      <tag.icon class="size-4" />
+                      {tag.name}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+              <footer class="flex items-end justify-start mt-4 gap-x-4">
+                {github && (
+                  <LinkButton href={github}>
+                    <GitHubAltIcon class="size-6" />
+                    Code
+                  </LinkButton>
+                )}
+                {link && (
+                  <LinkButton href={link}>
+                    <LinkIcon class="size-4" />
+                    Demo
+                  </LinkButton>
+                )}
+              </footer>
+            </div>
+          </div>
+        </article>
+      )
+    )
   }
 </div>
