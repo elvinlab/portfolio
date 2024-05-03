@@ -10,6 +10,10 @@ import ReactIcon from "../icons/ReactIcon.astro";
 import MaterialIcon from "../icons/MaterialIcon.astro";
 import MongoDBIcon from "../icons/MongoDBIcon.astro";
 import NodeIcon from "../icons/NodeIcon.astro";
+import FirebaseIcon from "../icons/FirebaseIcon.astro";
+import AngularIcon from "../icons/AngularIcon.astro";
+import LaravelIcon from "../icons/LaravelIcon.astro";
+import MySqlIcon from "../icons/MySqlIcon.astro";
 import { getI18N } from "@/i18n";
 
 const { currentLocale } = Astro;
@@ -46,26 +50,73 @@ const TAGS = {
     class: "bg-[#38642c] text-white",
     icon: NodeIcon,
   },
+  FIREBASE: {
+    name: "Firebase",
+    class: "bg-[#a95912] text-white",
+    icon: FirebaseIcon,
+  },
+  ANGULAR: {
+    name: "Angular",
+    class: "bg-[#430211] text-white",
+    icon: AngularIcon,
+  },
+  LARAVEL: {
+    name: "Laravel",
+    class: "bg-[#481010] text-white",
+    icon: LaravelIcon,
+  },
+  MYSQL: {
+    name: "MySQL",
+    class: "bg-[#0499c4] text-white",
+    icon: MySqlIcon,
+  },
 };
 const PROJECTS = [
   {
     id: i18n.PROJECTS.HACIENDA.ID,
-    title: i18n.PROJECTS.HACIENDA.LINK,
+    title: i18n.PROJECTS.HACIENDA.TITLE,
     description: i18n.PROJECTS.HACIENDA.DESCRIPTION,
-    link: null,
-    github: "https://github.com/elvinlab/hacienda-platform",
-    image: "/imgs/projects/hacienda-main.webp",
+    link: i18n.PROJECTS.HACIENDA.DEPLOY_LINK,
+    github: i18n.PROJECTS.HACIENDA.GITHUB_LINK,
+    image: i18n.PROJECTS.HACIENDA.IMGS[0].LINK,
     tags: [TAGS.TAILWIND, TAGS.REACT, TAGS.MATERIAL, TAGS.MONGODB, TAGS.NODE],
     imgs: i18n.PROJECTS.HACIENDA.IMGS,
   },
   {
     id: i18n.PROJECTS.SPOTIFY.ID,
+    title: i18n.PROJECTS.SPOTIFY.TITLE,
     description: i18n.PROJECTS.SPOTIFY.DESCRIPTION,
-    link: "https://open-spotify-plum.vercel.app/",
-    github: "https://github.com/elvinlab/open-spotify",
-    image: "/imgs/projects/open-spotify-main.webp",
+    link: i18n.PROJECTS.SPOTIFY.DEPLOY_LINK,
+    github: i18n.PROJECTS.SPOTIFY.GITHUB_LINK,
+    image: i18n.PROJECTS.SPOTIFY.IMGS[0].LINK,
     tags: [TAGS.TAILWIND, TAGS.REACT, TAGS.MONGODB, TAGS.NEXT],
     imgs: i18n.PROJECTS.SPOTIFY.IMGS,
+  },
+  {
+    id: i18n.PROJECTS.UNAVACUNA.ID,
+    title: i18n.PROJECTS.UNAVACUNA.TITLE,
+    description: i18n.PROJECTS.UNAVACUNA.DESCRIPTION,
+    link: i18n.PROJECTS.UNAVACUNA.DEPLOY_LINK,
+    github: i18n.PROJECTS.UNAVACUNA.GITHUB_LINK,
+    image: i18n.PROJECTS.UNAVACUNA.IMGS[0].LINK,
+    tags: [TAGS.TAILWIND, TAGS.REACT, TAGS.MONGODB, TAGS.NEXT, TAGS.FIREBASE],
+    imgs: i18n.PROJECTS.UNAVACUNA.IMGS,
+  },
+  {
+    id: i18n.PROJECTS.GUANAMUEBLES.ID,
+    title: i18n.PROJECTS.GUANAMUEBLES.TITLE,
+    description: i18n.PROJECTS.GUANAMUEBLES.DESCRIPTION,
+    link: i18n.PROJECTS.GUANAMUEBLES.DEPLOY_LINK,
+    github: i18n.PROJECTS.GUANAMUEBLES.GITHUB_LINK,
+    image: i18n.PROJECTS.GUANAMUEBLES.IMGS[0].LINK,
+    tags: [
+      TAGS.TAILWIND,
+      TAGS.ANGULAR,
+      TAGS.FIREBASE,
+      TAGS.LARAVEL,
+      TAGS.MYSQL,
+    ],
+    imgs: i18n.PROJECTS.GUANAMUEBLES.IMGS,
   },
 ];
 ---
@@ -87,7 +138,7 @@ const PROJECTS = [
             <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
               <img
                 onclick={`document.getElementById('projectModal-${id}').showModal();`}
-                alt="Recién llegado vs 5 años en Nueva Zelanda"
+                alt={title}
                 class="object-cover object-top w-full h-48 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105 cursor-pointer"
                 loading="lazy"
                 src={image}

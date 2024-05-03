@@ -81,7 +81,8 @@
       "ID": "hacienda",
       "TITLE": "Hacienda el Orosi",
       "DESCRIPTION": "Se desarrolló un proyecto interno para una empresa ganadera, abarcando la gestión integral de pagos, colaboradores, préstamos, herramientas, animales, facturación y ventas. Utilizando tecnologías como React, TailwindCSS, Express.JS y MongoDB, se creó una plataforma eficiente y escalable que simplifica las operaciones diarias y potencia la toma de decisiones estratégicas.",
-      "LINK": null,
+      "DEPLOY_LINK": null,
+      "GITHUB_LINK": "https://github.com/elvinlab/hacienda-platform",
       "IMGS": [
         {
           "LINK": "/imgs/projects/hacienda-main.webp",
@@ -117,7 +118,8 @@
       "ID": "open-spotify",
       "TITLE": "Open Spotify",
       "DESCRIPTION": "Se llevó a cabo la creación de un proyecto clon de Spotify en React con el objetivo principal de profundizar en el entendimiento y dominio del framework Next.js, en combinación con las potencialidades de React y la versatilidad de Tailwind CSS. Esta iniciativa permitió no solo explorar las funcionalidades y capacidades de estas tecnologías de vanguardia, sino también comprender mejor sus interacciones y cómo pueden ser aprovechadas en el desarrollo de aplicaciones web modernas y eficientes.",
-      "LINK": null,
+      "DEPLOY_LINK": "https://open-spotify-plum.vercel.app/",
+      "GITHUB_LINK": "https://github.com/elvinlab/open-spotify",
       "IMGS": [
         {
           "LINK": "/imgs/projects/open-spotify-main.webp",
@@ -125,11 +127,69 @@
         },
         {
           "LINK": "/imgs/projects/open-spotify-1.webp",
-          "ALT": "imagen pen Spotify 1"
+          "ALT": "imagen Open Spotify 1"
         },
         {
           "LINK": "/imgs/projects/open-spotify-2.webp",
-          "ALT": "imagen pen Spotify 2"
+          "ALT": "imagen Open Spotify 2"
+        }
+      ]
+    },
+    "UNAVACUNA": {
+      "ID": "una-vacuna",
+      "TITLE": "Una Vacuna",
+      "DESCRIPTION": "Desarrollo de un proyecto universitario en Next.js como parte del curso de Aplicaciones Globales 2021. El énfasis se centró en la implementación de gráficas, un sistema de inicio de sesión robusto, y un diseño llamativo y adaptable para la gestión de datos. El proyecto se construyó utilizando tecnologías como Tailwind CSS, React y Next.js.",
+      "DEPLOY_LINK": "https://unavacuna.netlify.app/",
+      "GITHUB_LINK": "https://github.com/elvinlab/unavacuna",
+      "IMGS": [
+        {
+          "LINK": "/imgs/projects/una-vacuna-main.webp",
+          "ALT": "imagen Una Vacuna principal"
+        },
+        {
+          "LINK": "/imgs/projects/una-vacuna-1.webp",
+          "ALT": "imagen Una Vacuna 1"
+        },
+        {
+          "LINK": "/imgs/projects/una-vacuna-2.webp",
+          "ALT": "imagen Una Vacuna 2"
+        },
+        {
+          "LINK": "/imgs/projects/una-vacuna-3.webp",
+          "ALT": "imagen Una Vacuna 3"
+        },
+        {
+          "LINK": "/imgs/projects/una-vacuna-4.webp",
+          "ALT": "imagen Una Vacuna 4"
+        },
+        {
+          "LINK": "/imgs/projects/una-vacuna-5.webp",
+          "ALT": "imagen Una Vacuna 5"
+        }
+      ]
+    },
+    "GUANAMUEBLES": {
+      "ID": "guana-muebles",
+      "TITLE": "Guana Muebles",
+      "DESCRIPTION": "Durante un proyecto universitario, se diseñó un E-commerce para una empresa que requería una plataforma de ventas en línea. Para presentar el proyecto al público, se realizó una demostración completa. El desarrollo abarcó la creación de un robusto backend utilizando Laravel, mientras que el frontend se construyó con Angular. Se optó por Bootstrap para asegurar un diseño visualmente atractivo y altamente funcional.",
+      "DEPLOY_LINK": "https://guana-muebles.web.app/inicio",
+      "GITHUB_LINK": "https://github.com/elvinlab/guana-muebles-web",
+      "IMGS": [
+        {
+          "LINK": "/imgs/projects/guana-muebles-main.webp",
+          "ALT": "imagen Guana Muebles principal"
+        },
+        {
+          "LINK": "/imgs/projects/guana-muebles-1.webp",
+          "ALT": "imagen Guana Muebles 1"
+        },
+        {
+          "LINK": "/imgs/projects/guana-muebles-2.webp",
+          "ALT": "imagen Guana Muebles 2"
+        },
+        {
+          "LINK": "/imgs/projects/guana-muebles-3.webp",
+          "ALT": "imagen Guana Muebles 3"
         }
       ]
     }
