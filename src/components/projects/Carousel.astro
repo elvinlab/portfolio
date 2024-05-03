@@ -21,7 +21,6 @@ const { imgs } = Astro.props;
     >
       {imgs.map(({ ALT }, i) => <CarouselButtons alt={ALT} index={i} />)}
     </div>
-    <!-- Slider controls -->
     <button
       type="button"
       class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"

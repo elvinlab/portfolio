@@ -78,37 +78,58 @@
   ],
   "PROJECTS": {
     "HACIENDA": {
+      "ID": "hacienda",
       "TITLE": "Hacienda el Orosi",
       "DESCRIPTION": "Se desarrolló un proyecto interno para una empresa ganadera, abarcando la gestión integral de pagos, colaboradores, préstamos, herramientas, animales, facturación y ventas. Utilizando tecnologías como React, TailwindCSS, Express.JS y MongoDB, se creó una plataforma eficiente y escalable que simplifica las operaciones diarias y potencia la toma de decisiones estratégicas.",
       "LINK": null,
       "IMGS": [
         {
           "LINK": "/imgs/projects/hacienda-main.webp",
-          "ALT": "imagen demostrativa principal"
+          "ALT": "imagen Hacienda principal"
         },
         {
           "LINK": "/imgs/projects/hacienda-1.webp",
-          "ALT": "imagen demostrativa 1"
+          "ALT": "imagen Hacienda 1"
         },
         {
           "LINK": "/imgs/projects/hacienda-2.webp",
-          "ALT": "imagen demostrativa 2"
+          "ALT": "imagen Hacienda 2"
         },
         {
           "LINK": "/imgs/projects/hacienda-3.webp",
-          "ALT": "imagen demostrativa 3"
+          "ALT": "imagen Hacienda 3"
         },
         {
           "LINK": "/imgs/projects/hacienda-4.webp",
-          "ALT": "imagen demostrativa 4"
+          "ALT": "imagen Hacienda 4"
         },
         {
           "LINK": "/imgs/projects/hacienda-5.webp",
-          "ALT": "imagen demostrativa 5"
+          "ALT": "imagen Hacienda 5"
         },
         {
           "LINK": "/imgs/projects/hacienda-6.webp",
-          "ALT": "imagen demostrativa 6"
+          "ALT": "imagen Hacienda 6"
+        }
+      ]
+    },
+    "SPOTIFY": {
+      "ID": "open-spotify",
+      "TITLE": "Open Spotify",
+      "DESCRIPTION": "Se llevó a cabo la creación de un proyecto clon de Spotify en React con el objetivo principal de profundizar en el entendimiento y dominio del framework Next.js, en combinación con las potencialidades de React y la versatilidad de Tailwind CSS. Esta iniciativa permitió no solo explorar las funcionalidades y capacidades de estas tecnologías de vanguardia, sino también comprender mejor sus interacciones y cómo pueden ser aprovechadas en el desarrollo de aplicaciones web modernas y eficientes.",
+      "LINK": null,
+      "IMGS": [
+        {
+          "LINK": "/imgs/projects/open-spotify-main.webp",
+          "ALT": "imagen Open Spotify principal"
+        },
+        {
+          "LINK": "/imgs/projects/open-spotify-1.webp",
+          "ALT": "imagen pen Spotify 1"
+        },
+        {
+          "LINK": "/imgs/projects/open-spotify-2.webp",
+          "ALT": "imagen pen Spotify 2"
         }
       ]
     }
