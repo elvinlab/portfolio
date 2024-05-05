@@ -4,23 +4,20 @@ import "@fontsource/fira-code";
 import "@fontsource/protest-revolution";
 import { ViewTransitions } from "astro:transitions";
 import Navbar from "../components/navbar/Navbar.astro";
+import BaseHead from "@/components/UI/BaseHead.astro";
 interface Props {
   title: string;
+  description: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 const { currentLocale } = Astro;
 ---
 
 <!doctype html>
 <html lang={currentLocale}>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="My description" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <BaseHead title={title} description={description} />
     <ViewTransitions />
   </head>
   <body class="relative text-textLight dark:text-white">

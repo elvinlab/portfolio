@@ -12,7 +12,10 @@ const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
 ---
 
-<Layout title="elvinlab">
+<Layout
+  title="Elvin González - Software developer"
+  description="Explore my web portfolio and discover the work of a full stack web developer. Immerse yourself in a digital experience that reflects my dedication and skills with just one click"
+>
   <SectionContainer
     id={i18n.NAVBAR[0].PATH.replace("/#", "")}
     class="px-4 z-20 mt-16 md:mt-[120px] mb-6 flex flex-col justify-start items-center sm:flex-row sm:gap-x-16"
