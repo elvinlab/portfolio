@@ -9,7 +9,51 @@ const { href, label, title } = Astro.props;
 ---
 
 <li>
-  <a href={href} aria-label={label} class="px-2 hover:underline">
+  <a
+    href={href}
+    aria-label={label}
+    class="px-2 transition hover:underline hover:text-yellow-500 dark:hover:text-yellow-400"
+  >
     {title}
   </a>
 </li>
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const sections = document.querySelectorAll("section");
+    const navItems = document.querySelectorAll("navbar nav a");
+
+    const callback = (entries: any[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          navItems.forEach((item) => {
+            if (item.getAttribute("aria-label") == entry.target.id) {
+              item.classList.add("text-yellow-500", "underline");
+            } else {
+              item.classList.remove("text-yellow-500", "underline");
+            }
+          });
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(callback, {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.3,
+    });
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+
+    document.onvisibilitychange = () => {
+      if (document.visibilityState === "hidden") {
+        observer.disconnect();
+      } else {
+        sections.forEach((section) => {
+          observer.observe(section);
+        });
+      }
+    };
+  });
+</script>
