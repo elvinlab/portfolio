@@ -33,13 +33,13 @@ const translatePath = useTranslatedPath(lang);
   </ul>
 </div>
 
-<script>
+<script is:inline>
   const languageButton = document.querySelector(".language-button");
-  const languageOpen = document.querySelector(".hidden-language-menu");
-  const burgerOpen = document.querySelector(".hidden-menu");
+  const languageOpenFromLang = document.querySelector(".hidden-language-menu");
+  const burgerOpenFromlang = document.querySelector(".hidden-menu");
 
   languageButton?.addEventListener("click", () => {
-    languageOpen?.classList.toggle("hidden");
-    burgerOpen?.classList.add("hidden");
+    languageOpenFromLang?.classList.toggle("hidden");
+    burgerOpenFromlang?.classList.add("hidden");
   });
 </script>

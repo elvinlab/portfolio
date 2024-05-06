@@ -18,7 +18,7 @@ const { href, label, title } = Astro.props;
   </a>
 </li>
 <script>
-  document.addEventListener("astro:page-load", () => {
+  document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll("section");
     const navItems = document.querySelectorAll("navbar nav a");
 
