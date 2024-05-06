@@ -2,7 +2,6 @@
 import "../styles/stars.css";
 import "@fontsource/fira-code";
 import "@fontsource/protest-revolution";
-import { ViewTransitions } from "astro:transitions";
 import Navbar from "../components/navbar/Navbar.astro";
 import BaseHead from "@/components/UI/BaseHead.astro";
 interface Props {
@@ -18,7 +17,6 @@ const { currentLocale } = Astro;
 <html lang={currentLocale}>
   <head>
     <BaseHead title={title} description={description} />
-    <ViewTransitions />
   </head>
   <body class="relative text-textLight dark:text-white">
     <div
