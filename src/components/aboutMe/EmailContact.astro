@@ -4,9 +4,9 @@ import SendIcon from "@/components/icons/SendIcon.astro";
 import { EMAIL } from "@/consts";
 ---
 
-<div class="flex items-center my-2 bg-[#1e2b2d] dark:bg-neutral-900 rounded-md">
+<div class="flex items-center border border-slate-300 dark:border-slate-700 rounded-lg overflow-hidden bg-white/50 dark:bg-slate-800/50">
   <input
-    class="text-[#bbbbbb] bg-transparent text-center text-xl"
+    class="text-slate-600 dark:text-slate-400 bg-transparent text-center text-sm px-4 py-2 w-[180px]"
     disabled
     value={EMAIL}
     placeholder={EMAIL}
@@ -14,12 +14,10 @@ import { EMAIL } from "@/consts";
   <CopyButton />
   <a
     title="Elvin Gonzalez"
-    aria-label="Elvin Gonzalez"
+    aria-label="Send email to Elvin Gonzalez"
     href={`mailto:${EMAIL}`}
-    class="bg-inherit py-3.5 rounded-md group"
+    class="px-3 py-2.5 text-slate-500 dark:text-slate-400 hover:text-accent-dark dark:hover:text-accent transition-colors duration-200"
   >
-    <SendIcon
-      class="text-white opacity-50 mr-5 group-hover:scale-110 group-hover:opacity-100 transition-all duration-300"
-    />
+    <SendIcon class="size-4" />
   </a>
 </div>

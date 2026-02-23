@@ -12,7 +12,7 @@ const { href, label, title } = Astro.props;
   <a
     href={href}
     aria-label={label}
-    class="px-2 transition hover:underline hover:text-yellow-500 dark:hover:text-yellow-400"
+    class="nav-link relative px-3 py-1.5 text-sm text-slate-600 dark:text-slate-400 transition-colors duration-200 hover:text-accent-dark dark:hover:text-accent rounded-md"
   >
     {title}
   </a>
@@ -20,16 +20,24 @@ const { href, label, title } = Astro.props;
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll("section");
-    const navItems = document.querySelectorAll("navbar nav a");
+    const navItems = document.querySelectorAll("header nav a");
 
     const callback = (entries: any[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           navItems.forEach((item) => {
             if (item.getAttribute("aria-label") == entry.target.id) {
-              item.classList.add("text-yellow-500", "underline");
+              item.classList.add("text-accent-dark", "dark:text-accent");
+              item.classList.remove(
+                "text-slate-600",
+                "dark:text-slate-400"
+              );
             } else {
-              item.classList.remove("text-yellow-500", "underline");
+              item.classList.remove("text-accent-dark", "dark:text-accent");
+              item.classList.add(
+                "text-slate-600",
+                "dark:text-slate-400"
+              );
             }
           });
         }

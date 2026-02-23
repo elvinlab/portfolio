@@ -7,12 +7,12 @@ const i18n = getI18N({ currentLocale });
 ---
 
 <h3
-  class="flex items-center text-2xl font-semibold gap-x-3 text-black/80 dark:text-white"
+  class="flex items-center text-2xl font-semibold gap-x-3 text-slate-900 dark:text-white"
 >
-  <Briefcase class="size-6" />
+  <Briefcase class="size-5 text-accent-dark dark:text-accent" />
   {i18n.TILES.EXPERIENCE}
 </h3>
-<ol class="relative mt-16">
+<ol class="relative mt-12">
   {
     i18n.EXPERIENCE.map((experiencie) => (
       <li>

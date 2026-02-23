@@ -4,21 +4,21 @@ import MoonIcon from "@/components/icons/MoonIcon.astro";
 ---
 
 <div
-  class="inline-flex items-center p-[1px] rounded-3xl bg-orange-300 dark:bg-zinc-600"
+  class="inline-flex items-center p-[2px] rounded-full bg-slate-200 dark:bg-slate-800 transition-colors"
 >
   <button
     id="theme-toggle-sun"
-    class="cursor-pointer rounded-3xl p-2"
-    aria-label="Toggle theme"
+    class="cursor-pointer rounded-full p-1.5 transition-all duration-200"
+    aria-label="Toggle light theme"
   >
-    <SunIcon class="h-6 w-6" />
+    <SunIcon class="h-5 w-5" />
   </button>
   <button
     id="theme-toggle-moon"
-    class="cursor-pointer rounded-3xl p-2"
-    aria-label="Toggle theme"
+    class="cursor-pointer rounded-full p-1.5 transition-all duration-200"
+    aria-label="Toggle dark theme"
   >
-    <MoonIcon class="h-6 w-6" />
+    <MoonIcon class="h-5 w-5" />
   </button>
 </div>
 
@@ -29,7 +29,6 @@ import MoonIcon from "@/components/icons/MoonIcon.astro";
     if (typeof localStorage !== "undefined") {
       return localStorage.getItem("theme") ?? "system";
     }
-
     return window.matchMedia("(prefers-color-scheme: dark)").matches
       ? "dark"
       : "light";
@@ -39,10 +38,10 @@ import MoonIcon from "@/components/icons/MoonIcon.astro";
   const btnMoon = document.getElementById("theme-toggle-moon");
 
   function handleButtonClick(clickedButton, otherButton) {
-    clickedButton.classList.add("bg-white", "text-black");
-
-    otherButton.classList.remove("bg-white", "text-black");
+    clickedButton.classList.add("bg-white", "dark:bg-slate-700", "text-amber-500", "dark:text-accent", "shadow-sm");
+    otherButton.classList.remove("bg-white", "dark:bg-slate-700", "text-amber-500", "dark:text-accent", "shadow-sm");
   }
+
   btnSun.addEventListener("click", function () {
     handleButtonClick(btnSun, btnMoon);
     localStorage.setItem("theme", "light");
@@ -61,8 +60,8 @@ import MoonIcon from "@/components/icons/MoonIcon.astro";
       themePreference === "dark" ||
       (themePreference === "system" && matchMedia.matches);
 
-    btnSun.classList[!isDark ? "add" : "remove"]("bg-white", "text-black");
-    btnMoon.classList[isDark ? "add" : "remove"]("bg-white", "text-black");
+    btnSun.classList[!isDark ? "add" : "remove"]("bg-white", "dark:bg-slate-700", "text-amber-500", "dark:text-accent", "shadow-sm");
+    btnMoon.classList[isDark ? "add" : "remove"]("bg-white", "dark:bg-slate-700", "text-amber-500", "dark:text-accent", "shadow-sm");
 
     document.documentElement.classList[isDark ? "add" : "remove"]("dark");
   };

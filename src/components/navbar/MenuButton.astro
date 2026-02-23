@@ -1,28 +1,21 @@
 ---
 import Burguer from "@/components/icons/BurgerIcon.astro";
-//import { getRelativeLocaleUrl } from "astro:i18n";
-import { getLangFromUrl, useTranslations } from "@/i18n/utils.ts";
-import Notification from "../UI/Notification.astro";
-
 import { getI18N } from "@/i18n";
 
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
-
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
 ---
 
-<Notification id="notification-next" msg={i18n.BUTTONS.UPDATES} />
 <div class="relative inline-block text-left lg:hidden">
   <button
-    class="menu-button inline-flex justify-center items-center rounded-md border border-zinc-400 dark:border-zinc-400 p-1 font-bold shadow-sm hover:bg-orange-200 dark:hover:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-gray-100 transition-all duration-300"
+    class="menu-button inline-flex justify-center items-center rounded-lg border border-slate-300 dark:border-slate-700 p-1.5 text-slate-600 dark:text-slate-400 hover:border-accent dark:hover:border-accent hover:text-accent-dark dark:hover:text-accent transition-all duration-200"
+    aria-label="Open menu"
   >
-    <Burguer class="h-8 w-8" />
+    <Burguer class="h-5 w-5" />
   </button>
   <ul
     id="ul-menu-responsive"
-    class="hidden absolute right-0 z-10 mt-2 origin-top-right rounded-md border border-zinc-400 dark:border-zinc-700 bg-orange-50 dark:bg-zinc-800 shadow-xl ring-1 ring-black ring-opacity-5 focus:outline-none divide-zinc-400 dark:divide-zinc-700 hidden-menu"
+    class="hidden absolute right-0 z-10 mt-2 min-w-[180px] origin-top-right rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-lg hidden-menu overflow-hidden"
   >
     <li>
       {
@@ -30,28 +23,12 @@ const t = useTranslations(lang);
           <a
             href={route.PATH}
             aria-label={route.LABEL}
-            class="block px-4 py-2 text-sm hover:underline"
+            class="block px-4 py-2.5 text-sm text-slate-700 dark:text-slate-300 hover:bg-accent-muted hover:text-accent-dark dark:hover:text-accent transition-colors"
           >
             {route.TITLE}
           </a>
         ))
       }
-
-      <button
-        id="btn-menu-responsive"
-        class="block px-4 py-2 text-sm hover:underline"
-        aria-label={t("nav.comments.label")}
-      >
-        {t("nav.comments.title")}
-      </button>
-
-      <!-- <a
-        class="block px-4 py-2 text-sm hover:underline"
-        href={getRelativeLocaleUrl(currentLocale ?? "", t("nav.comments.path"))}
-        aria-label={t("nav.comments.label")}
-      >
-        {t("nav.comments.title")}
-      </a> -->
     </li>
   </ul>
 </div>
@@ -59,27 +36,10 @@ const t = useTranslations(lang);
 <script is:inline>
   const burgeButton = document.querySelector(".menu-button");
   const burgerOpen = document.querySelector(".hidden-menu");
-
   const languageOpen = document.querySelector(".hidden-language-menu");
+
   burgeButton?.addEventListener("click", () => {
     burgerOpen?.classList.toggle("hidden");
     languageOpen?.classList.add("hidden");
-  });
-
-  const btnMenuResponsive = document.getElementById("btn-menu-responsive");
-  const btnNotificationFromMenuRes =
-    document.getElementById("notification-next");
-
-  btnMenuResponsive.addEventListener("click", function () {
-    burgerOpen?.classList.add("hidden");
-
-    btnNotificationFromMenuRes.classList.toggle(
-      "hidden",
-      !btnNotificationFromMenuRes.classList.contains("hidden")
-    );
-
-    setTimeout(() => {
-      btnNotificationFromMenuRes.classList.toggle("hidden", true);
-    }, 3000);
   });
 </script>

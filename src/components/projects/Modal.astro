@@ -19,51 +19,45 @@ const { id, imgs } = Astro.props;
 
 <dialog
   id={`projectModal-${id}`}
-  class="h-auto w-11/12 md:w-1/2 bg-transparent rounded-md mt-36"
+  class="h-auto w-11/12 md:w-3/5 lg:w-1/2 bg-white dark:bg-slate-900 rounded-xl mt-24 p-0 border border-slate-200 dark:border-slate-800 shadow-2xl"
 >
   <div class="flex flex-col w-full">
-    <div class="flex w-full h-auto justify-center items-center">
-      <div
-        class="flex w-10/12 h-auto py-3 justify-center items-center text-xl font-bold"
-      >
+    <div class="flex items-center justify-between px-5 py-4 border-b border-slate-200 dark:border-slate-800">
+      <h4 class="text-lg font-semibold text-slate-900 dark:text-white">
         {i18n.TILES.DEMONSTRATIONS}
-      </div>
-      <div
+      </h4>
+      <button
         onclick={`document.getElementById('projectModal-${id}').close();`}
-        class="flex w-1/12 h-auto justify-center cursor-pointer"
+        class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors cursor-pointer"
       >
-        <CloseIcon class="h-12 w-12" />
-      </div>
+        <CloseIcon class="h-6 w-6" />
+      </button>
     </div>
 
-    <div class="mt-10">
-      <Carousel imgs={imgs} />
+    <div class="p-4">
+      <Carousel imgs={imgs} id={id} />
     </div>
   </div>
 </dialog>
+
 <style>
   dialog[open] {
-    animation: appear 0.15s cubic-bezier(0, 1.8, 1, 1.8);
+    animation: appear 0.2s ease-out;
   }
 
   dialog::backdrop {
-    background: linear-gradient(
-      45deg,
-      rgba(0, 0, 0, 0.5),
-      rgba(54, 54, 54, 0.5)
-    );
-    backdrop-filter: blur(3px);
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
   }
 
   @keyframes appear {
     from {
       opacity: 0;
-      transform: translateX(-3rem);
+      transform: translateY(-10px) scale(0.98);
     }
-
     to {
       opacity: 1;
-      transform: translateX(0);
+      transform: translateY(0) scale(1);
     }
   }
 </style>

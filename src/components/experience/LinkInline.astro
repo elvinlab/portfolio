@@ -6,7 +6,8 @@ const { href } = Astro.props;
   href={href}
   role="link"
   target="_blank"
-  class="inline-flex items-center text-lg font-medium text-yellow-500 dark:text-yellow-200 dark:hover:text-yellow-300 hover:text-yellow-700"
+  rel="noopener noreferrer"
+  class="inline-flex items-center text-sm font-medium text-accent-dark dark:text-accent hover:text-teal-700 dark:hover:text-accent-light transition-colors duration-200"
 >
   <slot />
 </a>
