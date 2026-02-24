@@ -99,20 +99,12 @@
       "GITHUB_LINK": "https://github.com/elvinlab/PokeQuizAdventureGame",
       "IMGS": [
         {
-          "LINK": "/imgs/projects/pokequiz-main.webp",
-          "ALT": "PokeQuizAdventureGame main image"
+          "LINK": "/imgs/projects/poke1.webp",
+          "ALT": "imagen PokeQuizAdventureGame principal"
         },
         {
-          "LINK": "/imgs/projects/pokequiz-1.webp",
-          "ALT": "PokeQuizAdventureGame image 1"
-        },
-        {
-          "LINK": "/imgs/projects/pokequiz-2.webp",
-          "ALT": "PokeQuizAdventureGame image 2"
-        },
-        {
-          "LINK": "/imgs/projects/pokequiz-3.webp",
-          "ALT": "PokeQuizAdventureGame image 3"
+          "LINK": "/imgs/projects/poke2.webp",
+          "ALT": "imagen PokeQuizAdventureGame 1"
         }
       ]
     },
@@ -124,16 +116,8 @@
       "GITHUB_LINK": "https://github.com/elvinlab/discovering-owls",
       "IMGS": [
         {
-          "LINK": "/imgs/projects/discovering-owls-main.webp",
-          "ALT": "Discovering Owls main image"
-        },
-        {
-          "LINK": "/imgs/projects/discovering-owls-1.webp",
-          "ALT": "Discovering Owls image 1"
-        },
-        {
-          "LINK": "/imgs/projects/discovering-owls-2.webp",
-          "ALT": "Discovering Owls image 2"
+          "LINK": "https://muyinteresante.okdiario.com/wp-content/uploads/sites/5/2022/10/12/6345ecf872c9a.jpeg",
+          "ALT": "imagen Discovering Owls principal"
         }
       ]
     },
@@ -145,16 +129,8 @@
       "GITHUB_LINK": "https://github.com/elvinlab/js-practice-repo",
       "IMGS": [
         {
-          "LINK": "/imgs/projects/js-practice-main.webp",
-          "ALT": "JavaScript Practice main image"
-        },
-        {
-          "LINK": "/imgs/projects/js-practice-1.webp",
-          "ALT": "JavaScript Practice image 1"
-        },
-        {
-          "LINK": "/imgs/projects/js-practice-2.webp",
-          "ALT": "JavaScript Practice image 2"
+          "LINK": "/imgs/projects/jsProject.webp",
+          "ALT": "imagen JavaScript Practice principal"
         }
       ]
     },
@@ -166,16 +142,8 @@
       "GITHUB_LINK": "https://github.com/elvinlab/eli-recomienda-template",
       "IMGS": [
         {
-          "LINK": "/imgs/projects/eli-recomienda-main.webp",
-          "ALT": "Eli Recommends main image"
-        },
-        {
-          "LINK": "/imgs/projects/eli-recomienda-1.webp",
-          "ALT": "Eli Recommends image 1"
-        },
-        {
-          "LINK": "/imgs/projects/eli-recomienda-2.webp",
-          "ALT": "Eli Recommends image 2"
+          "LINK": "https://static-blog.siteground.com/wp-content/uploads/sites/4/2022/02/what-is-a-blog-1200x600-1.jpeg",
+          "ALT": "imagen Eli Recomienda principal"
         }
       ]
     },
@@ -188,31 +156,31 @@
       "IMGS": [
         {
           "LINK": "/imgs/projects/hacienda-main.webp",
-          "ALT": "Hacienda image main"
+          "ALT": "imagen Hacienda principal"
         },
         {
           "LINK": "/imgs/projects/hacienda-1.webp",
-          "ALT": "Hacienda image 1"
+          "ALT": "imagen Hacienda 1"
         },
         {
           "LINK": "/imgs/projects/hacienda-2.webp",
-          "ALT": "Hacienda image 2"
+          "ALT": "imagen Hacienda 2"
         },
         {
           "LINK": "/imgs/projects/hacienda-3.webp",
-          "ALT": "Hacienda image 3"
+          "ALT": "imagen Hacienda 3"
         },
         {
           "LINK": "/imgs/projects/hacienda-4.webp",
-          "ALT": "Hacienda image 4"
+          "ALT": "imagen Hacienda 4"
         },
         {
           "LINK": "/imgs/projects/hacienda-5.webp",
-          "ALT": "Hacienda image 5"
+          "ALT": "imagen Hacienda 5"
         },
         {
           "LINK": "/imgs/projects/hacienda-6.webp",
-          "ALT": "Hacienda image 6"
+          "ALT": "imagen Hacienda 6"
         }
       ]
     },
