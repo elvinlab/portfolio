@@ -1,8 +1,9 @@
 export const SITE_TITLE = "Elvinlab";
 export const SITE_DESCRIPTION = "Welcome to my website!";
-export const EMAIL = "dev@elvinlab.com";
-export const AVATAR_LINK = "/imgs/UI/avatar.webp";
+export const EMAIL = "elvinlab@outlook.com";
+export const AVATAR_LINK = "/imgs/UI/profile.webp";
 export const LINKEDIN_LINK = "https://www.linkedin.com/in/elvinlab/";
+export const CURRENT_COMPANY = "https://www.linkedin.com/company/getbuo/";
 export const RESUME_ES_LINK =
   "https://drive.google.com/file/d/1W1e7tGAeaOTp80ke3I9-5hUbUGfEiE84/view?usp=drive_link";
 export const RESUME_EN_LINK =

@@ -16,16 +16,15 @@ const i18n = getI18N({ currentLocale });
 </button>
 
 <script is:inline>
-  const EMAIL = "dev@elvinlab.com";
-  const copyButton = document.getElementById("copy-button");
-  const btnNotificationFromCopyBtn = document.getElementById(
-    "notification-copy-btn"
-  );
-
   function copyEmailToClipBoard() {
+    const EMAIL = "elvinlab@outlook.com";
+    const copyButton = document.getElementById("copy-button");
+    const btnNotificationFromCopyBtn = document.getElementById(
+      "notification-copy-btn",
+    );
     btnNotificationFromCopyBtn.classList.toggle(
       "hidden",
-      !btnNotificationFromCopyBtn.classList.contains("hidden")
+      !btnNotificationFromCopyBtn.classList.contains("hidden"),
     );
 
     setTimeout(() => {
@@ -35,5 +34,7 @@ const i18n = getI18N({ currentLocale });
     return window.navigator.clipboard.writeText(EMAIL);
   }
 
-  copyButton?.addEventListener("click", copyEmailToClipBoard);
+  document
+    .getElementById("copy-button")
+    ?.addEventListener("click", copyEmailToClipBoard);
 </script>

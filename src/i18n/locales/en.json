@@ -51,6 +51,15 @@
   },
   "EXPERIENCE": [
     {
+      "COMPANY": "Buo",
+      "POSITION": "Software Engineer Full-stack",
+      "DATE": "Apr 2022 - Present",
+      "DESCRIPTION": "I design and develop scalable, high-performance software solutions using advanced JavaScript (ES6+), Vue, Vuetify, and Java with Spring Boot. I implement robust architectures applying SOLID principles and design patterns to ensure clean, maintainable, and easily testable code. I integrate Artificial Intelligence-based solutions to optimize processes, enhance decision-making, and strengthen business capabilities. I work on REST API design and integration, performance optimization, and continuous user experience improvement. I actively collaborate with cross-functional teams, contributing technical vision, best practices, and a results-driven strategic approach.",
+      "LINK": "https://www.linkedin.com/company/getbuo",
+      "IMG_LINK": "/imgs/experience/buo.webp",
+      "ALT_TEXT": "Get Buo"
+    },
+    {
       "COMPANY": "Blue Zone Consulting Partners",
       "POSITION": "Software Developer",
       "DATE": "Apr 2022 - Apr 2024",
@@ -82,6 +91,94 @@
     }
   ],
   "PROJECTS": {
+    "PokeQuizAdventureGame": {
+      "ID": "pokequizadventuregame",
+      "TITLE": "Poke Quiz Adventure Game",
+      "DESCRIPTION": "An interactive quiz game inspired by the Pokémon universe. The project was developed using Vue 3, Vite, and TailwindCSS, integrating Vue Router for navigation, vue-i18n for internationalization, and Axios for API consumption. It includes animations powered by animate.css and UI components from Flowbite, delivering a dynamic, modern, and performance-optimized user experience.",
+      "DEPLOY_LINK": "https://poke-quiz-adventure.netlify.app/",
+      "GITHUB_LINK": "https://github.com/elvinlab/PokeQuizAdventureGame",
+      "IMGS": [
+        {
+          "LINK": "/imgs/projects/pokequiz-main.webp",
+          "ALT": "PokeQuizAdventureGame main image"
+        },
+        {
+          "LINK": "/imgs/projects/pokequiz-1.webp",
+          "ALT": "PokeQuizAdventureGame image 1"
+        },
+        {
+          "LINK": "/imgs/projects/pokequiz-2.webp",
+          "ALT": "PokeQuizAdventureGame image 2"
+        },
+        {
+          "LINK": "/imgs/projects/pokequiz-3.webp",
+          "ALT": "PokeQuizAdventureGame image 3"
+        }
+      ]
+    },
+    "discoveringOwls": {
+      "ID": "discoveringOwls",
+      "TITLE": "Discovering Owls",
+      "DESCRIPTION": "A blog platform developed with Vue 3, TypeScript, and Vite, focused on publishing informative articles about owls, including species, habitats, and conservation. The project implements a modular component-based architecture, SPA navigation, and a responsive design. It integrates AI-assisted translation to generate multilingual versions of the articles, expanding international reach and improving content production efficiency.",
+      "DEPLOY_LINK": "https://discovering-owls.netlify.app/",
+      "GITHUB_LINK": "https://github.com/elvinlab/discovering-owls",
+      "IMGS": [
+        {
+          "LINK": "/imgs/projects/discovering-owls-main.webp",
+          "ALT": "Discovering Owls main image"
+        },
+        {
+          "LINK": "/imgs/projects/discovering-owls-1.webp",
+          "ALT": "Discovering Owls image 1"
+        },
+        {
+          "LINK": "/imgs/projects/discovering-owls-2.webp",
+          "ALT": "Discovering Owls image 2"
+        }
+      ]
+    },
+    "JSPracticePlayground": {
+      "ID": "js-practice-playground",
+      "TITLE": "JavaScript Practice & Internships",
+      "DESCRIPTION": "A web platform that compiles and documents all my practice work and exercises focused on mastering JavaScript. This project serves as a technical progress record, showcasing different challenges, concepts, and solutions applied over time. It is complemented by a playground-style repository where I experiment, practice logic, data structures, and multiple problem-solving approaches to continuously strengthen my skills in the language.",
+      "DEPLOY_LINK": "https://elvinlab-projects.netlify.app/",
+      "GITHUB_LINK": "https://github.com/elvinlab/js-practice-repo",
+      "IMGS": [
+        {
+          "LINK": "/imgs/projects/js-practice-main.webp",
+          "ALT": "JavaScript Practice main image"
+        },
+        {
+          "LINK": "/imgs/projects/js-practice-1.webp",
+          "ALT": "JavaScript Practice image 1"
+        },
+        {
+          "LINK": "/imgs/projects/js-practice-2.webp",
+          "ALT": "JavaScript Practice image 2"
+        }
+      ]
+    },
+    "EliRecomienda": {
+      "ID": "eli-recomienda",
+      "TITLE": "Eli Recommends",
+      "DESCRIPTION": "A web platform currently under development focused on publishing recommendations about products, tools, content, and useful resources. The project functions as a dynamic blog where recommendations can be organized by categories, highlight featured content, and provide a clean and engaging reading experience. It is designed with a modular and scalable architecture, allowing future enhancements such as tag systems, filtering, affiliate integrations, and SEO optimization.",
+      "DEPLOY_LINK": "https://elirecomienda-temp.netlify.app/",
+      "GITHUB_LINK": "https://github.com/elvinlab/eli-recomienda-template",
+      "IMGS": [
+        {
+          "LINK": "/imgs/projects/eli-recomienda-main.webp",
+          "ALT": "Eli Recommends main image"
+        },
+        {
+          "LINK": "/imgs/projects/eli-recomienda-1.webp",
+          "ALT": "Eli Recommends image 1"
+        },
+        {
+          "LINK": "/imgs/projects/eli-recomienda-2.webp",
+          "ALT": "Eli Recommends image 2"
+        }
+      ]
+    },
     "HACIENDA": {
       "ID": "Hacienda",
       "TITLE": "Hacienda el Orosi",
@@ -89,25 +186,55 @@
       "DEPLOY_LINK": null,
       "GITHUB_LINK": "https://github.com/elvinlab/hacienda-platform",
       "IMGS": [
-        { "LINK": "/imgs/projects/hacienda-main.webp", "ALT": "Hacienda image main" },
-        { "LINK": "/imgs/projects/hacienda-1.webp", "ALT": "Hacienda image 1" },
-        { "LINK": "/imgs/projects/hacienda-2.webp", "ALT": "Hacienda image 2" },
-        { "LINK": "/imgs/projects/hacienda-3.webp", "ALT": "Hacienda image 3" },
-        { "LINK": "/imgs/projects/hacienda-4.webp", "ALT": "Hacienda image 4" },
-        { "LINK": "/imgs/projects/hacienda-5.webp", "ALT": "Hacienda image 5" },
-        { "LINK": "/imgs/projects/hacienda-6.webp", "ALT": "Hacienda image 6" }
+        {
+          "LINK": "/imgs/projects/hacienda-main.webp",
+          "ALT": "Hacienda image main"
+        },
+        {
+          "LINK": "/imgs/projects/hacienda-1.webp",
+          "ALT": "Hacienda image 1"
+        },
+        {
+          "LINK": "/imgs/projects/hacienda-2.webp",
+          "ALT": "Hacienda image 2"
+        },
+        {
+          "LINK": "/imgs/projects/hacienda-3.webp",
+          "ALT": "Hacienda image 3"
+        },
+        {
+          "LINK": "/imgs/projects/hacienda-4.webp",
+          "ALT": "Hacienda image 4"
+        },
+        {
+          "LINK": "/imgs/projects/hacienda-5.webp",
+          "ALT": "Hacienda image 5"
+        },
+        {
+          "LINK": "/imgs/projects/hacienda-6.webp",
+          "ALT": "Hacienda image 6"
+        }
       ]
     },
     "SPOTIFY": {
       "ID": "open-spotify",
       "TITLE": "Open Spotify",
       "DESCRIPTION": "A Spotify clone project was built to deepen understanding of Next.js, React, and Tailwind CSS. This initiative explored the capabilities of these cutting-edge technologies and how they can be leveraged in modern web applications.",
-      "DEPLOY_LINK": "https://open-spotify-plum.vercel.app/",
+      "DEPLOY_LINK": null,
       "GITHUB_LINK": "https://github.com/elvinlab/open-spotify",
       "IMGS": [
-        { "LINK": "/imgs/projects/open-spotify-main.webp", "ALT": "image Open Spotify main" },
-        { "LINK": "/imgs/projects/open-spotify-1.webp", "ALT": "image Open Spotify 1" },
-        { "LINK": "/imgs/projects/open-spotify-2.webp", "ALT": "image Open Spotify 2" }
+        {
+          "LINK": "/imgs/projects/open-spotify-main.webp",
+          "ALT": "image Open Spotify main"
+        },
+        {
+          "LINK": "/imgs/projects/open-spotify-1.webp",
+          "ALT": "image Open Spotify 1"
+        },
+        {
+          "LINK": "/imgs/projects/open-spotify-2.webp",
+          "ALT": "image Open Spotify 2"
+        }
       ]
     },
     "UNAVACUNA": {
@@ -117,12 +244,30 @@
       "DEPLOY_LINK": "https://unavacuna.netlify.app/",
       "GITHUB_LINK": "https://github.com/elvinlab/unavacuna",
       "IMGS": [
-        { "LINK": "/imgs/projects/una-vacuna-main.webp", "ALT": "image Una Vacuna main" },
-        { "LINK": "/imgs/projects/una-vacuna-1.webp", "ALT": "image Una Vacuna 1" },
-        { "LINK": "/imgs/projects/una-vacuna-2.webp", "ALT": "image Una Vacuna 2" },
-        { "LINK": "/imgs/projects/una-vacuna-3.webp", "ALT": "image Una Vacuna 3" },
-        { "LINK": "/imgs/projects/una-vacuna-4.webp", "ALT": "image Una Vacuna 4" },
-        { "LINK": "/imgs/projects/una-vacuna-5.webp", "ALT": "image Una Vacuna 5" }
+        {
+          "LINK": "/imgs/projects/una-vacuna-main.webp",
+          "ALT": "image Una Vacuna main"
+        },
+        {
+          "LINK": "/imgs/projects/una-vacuna-1.webp",
+          "ALT": "image Una Vacuna 1"
+        },
+        {
+          "LINK": "/imgs/projects/una-vacuna-2.webp",
+          "ALT": "image Una Vacuna 2"
+        },
+        {
+          "LINK": "/imgs/projects/una-vacuna-3.webp",
+          "ALT": "image Una Vacuna 3"
+        },
+        {
+          "LINK": "/imgs/projects/una-vacuna-4.webp",
+          "ALT": "image Una Vacuna 4"
+        },
+        {
+          "LINK": "/imgs/projects/una-vacuna-5.webp",
+          "ALT": "image Una Vacuna 5"
+        }
       ]
     },
     "GUANAMUEBLES": {
@@ -132,10 +277,22 @@
       "DEPLOY_LINK": "https://guana-muebles.web.app/inicio",
       "GITHUB_LINK": "https://github.com/elvinlab/guana-muebles-web",
       "IMGS": [
-        { "LINK": "/imgs/projects/guana-muebles-main.webp", "ALT": "image Guana Muebles main" },
-        { "LINK": "/imgs/projects/guana-muebles-1.webp", "ALT": "image Guana Muebles 1" },
-        { "LINK": "/imgs/projects/guana-muebles-2.webp", "ALT": "image Guana Muebles 2" },
-        { "LINK": "/imgs/projects/guana-muebles-3.webp", "ALT": "image Guana Muebles 3" }
+        {
+          "LINK": "/imgs/projects/guana-muebles-main.webp",
+          "ALT": "image Guana Muebles main"
+        },
+        {
+          "LINK": "/imgs/projects/guana-muebles-1.webp",
+          "ALT": "image Guana Muebles 1"
+        },
+        {
+          "LINK": "/imgs/projects/guana-muebles-2.webp",
+          "ALT": "image Guana Muebles 2"
+        },
+        {
+          "LINK": "/imgs/projects/guana-muebles-3.webp",
+          "ALT": "image Guana Muebles 3"
+        }
       ]
     }
   }

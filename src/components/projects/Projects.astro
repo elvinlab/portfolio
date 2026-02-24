@@ -13,6 +13,8 @@ import NodeIcon from "../icons/NodeIcon.astro";
 import FirebaseIcon from "../icons/FirebaseIcon.astro";
 import AngularIcon from "../icons/AngularIcon.astro";
 import LaravelIcon from "../icons/LaravelIcon.astro";
+import VueIcon from "../icons/VueIcon.astro";
+import AstroIcon from "../icons/AstroIcon.astro";
 import MySqlIcon from "../icons/MySqlIcon.astro";
 import { getI18N } from "@/i18n";
 
@@ -70,9 +72,59 @@ const TAGS = {
     class: "bg-blue-800/80 text-blue-100",
     icon: MySqlIcon,
   },
+  VUE: {
+    name: "Vue.js",
+    class: "bg-green-800/80 text-green-100",
+    icon: VueIcon,
+  },
+  ASTRO: {
+    name: "Astro",
+    class: "bg-purple-800/80 text-purple-100",
+    icon: AstroIcon,
+  },
 };
 
 const PROJECTS = [
+  {
+    id: i18n.PROJECTS.PokeQuizAdventureGame.ID,
+    title: i18n.PROJECTS.PokeQuizAdventureGame.TITLE,
+    description: i18n.PROJECTS.PokeQuizAdventureGame.DESCRIPTION,
+    link: i18n.PROJECTS.PokeQuizAdventureGame.DEPLOY_LINK,
+    github: i18n.PROJECTS.PokeQuizAdventureGame.GITHUB_LINK,
+    image: i18n.PROJECTS.PokeQuizAdventureGame.IMGS[0].LINK,
+    tags: [TAGS.TAILWIND, TAGS.VUE, TAGS.NODE],
+    imgs: i18n.PROJECTS.PokeQuizAdventureGame.IMGS,
+  },
+  {
+    id: i18n.PROJECTS.discoveringOwls.ID,
+    title: i18n.PROJECTS.discoveringOwls.TITLE,
+    description: i18n.PROJECTS.discoveringOwls.DESCRIPTION,
+    link: i18n.PROJECTS.discoveringOwls.DEPLOY_LINK,
+    github: i18n.PROJECTS.discoveringOwls.GITHUB_LINK,
+    image: i18n.PROJECTS.discoveringOwls.IMGS[0].LINK,
+    tags: [TAGS.TAILWIND, TAGS.VUE, TAGS.NODE],
+    imgs: i18n.PROJECTS.discoveringOwls.IMGS,
+  },
+  {
+    id: i18n.PROJECTS.JSPracticePlayground.ID,
+    title: i18n.PROJECTS.JSPracticePlayground.TITLE,
+    description: i18n.PROJECTS.JSPracticePlayground.DESCRIPTION,
+    link: i18n.PROJECTS.JSPracticePlayground.DEPLOY_LINK,
+    github: i18n.PROJECTS.JSPracticePlayground.GITHUB_LINK,
+    image: i18n.PROJECTS.JSPracticePlayground.IMGS[0].LINK,
+    tags: [TAGS.NODE],
+    imgs: i18n.PROJECTS.JSPracticePlayground.IMGS,
+  },
+  {
+    id: i18n.PROJECTS.EliRecomienda.ID,
+    title: i18n.PROJECTS.EliRecomienda.TITLE,
+    description: i18n.PROJECTS.EliRecomienda.DESCRIPTION,
+    link: i18n.PROJECTS.EliRecomienda.DEPLOY_LINK,
+    github: i18n.PROJECTS.EliRecomienda.GITHUB_LINK,
+    image: i18n.PROJECTS.EliRecomienda.IMGS[0].LINK,
+    tags: [TAGS.TAILWIND, TAGS.ASTRO],
+    imgs: i18n.PROJECTS.EliRecomienda.IMGS,
+  },
   {
     id: i18n.PROJECTS.HACIENDA.ID,
     title: i18n.PROJECTS.HACIENDA.TITLE,
@@ -110,7 +162,13 @@ const PROJECTS = [
     link: i18n.PROJECTS.GUANAMUEBLES.DEPLOY_LINK,
     github: i18n.PROJECTS.GUANAMUEBLES.GITHUB_LINK,
     image: i18n.PROJECTS.GUANAMUEBLES.IMGS[0].LINK,
-    tags: [TAGS.TAILWIND, TAGS.ANGULAR, TAGS.FIREBASE, TAGS.LARAVEL, TAGS.MYSQL],
+    tags: [
+      TAGS.TAILWIND,
+      TAGS.ANGULAR,
+      TAGS.FIREBASE,
+      TAGS.LARAVEL,
+      TAGS.MYSQL,
+    ],
     imgs: i18n.PROJECTS.GUANAMUEBLES.IMGS,
   },
 ];
@@ -175,7 +233,7 @@ const PROJECTS = [
             </footer>
           </div>
         </article>
-      )
+      ),
     )
   }
 </div>

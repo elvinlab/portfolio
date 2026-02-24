@@ -9,6 +9,8 @@ import MySqlIcon from "@/components/icons/MySqlIcon.astro";
 import AngularIcon from "@/components/icons/AngularIcon.astro";
 import LaravelIcon from "@/components/icons/LaravelIcon.astro";
 import MaterialIcon from "@/components/icons/MaterialIcon.astro";
+import AstroIcon from "@/components/icons/AstroIcon.astro";
+import VueIcon from "@/components/icons/VueIcon.astro";
 import { getI18N } from "@/i18n";
 
 const { currentLocale } = Astro;
@@ -19,6 +21,8 @@ const categories = [
     title: "Frontend",
     techs: [
       { name: "React", icon: ReactIcon },
+      { name: "Astro", icon: AstroIcon },
+      { name: "Vue", icon: VueIcon },
       { name: "Next.js", icon: NextJSIcon },
       { name: "Angular", icon: AngularIcon },
       { name: "TailwindCSS", icon: TailwindIcon },
@@ -58,7 +62,15 @@ const categories = [
 <h3
   class="flex items-center mb-10 text-2xl font-semibold gap-x-3 text-slate-900 dark:text-white"
 >
-  <svg class="size-5 text-accent-dark dark:text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <svg
+    class="size-5 text-accent-dark dark:text-accent"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
     <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
     <path d="M2 17l10 5 10-5"></path>
     <path d="M2 12l10 5 10-5"></path>
