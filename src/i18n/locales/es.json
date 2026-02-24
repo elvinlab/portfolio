@@ -16,40 +16,54 @@
       "PATH": "/#proyectos"
     },
     {
-      "TITLE": "Sobre mí",
-      "LABEL": "sobre-mi",
-      "PATH": "/#sobre-mi"
+      "TITLE": "Tech Stack",
+      "LABEL": "tech-stack",
+      "PATH": "/#tech-stack"
     },
     {
       "TITLE": "Contacto",
       "LABEL": "contacto",
-      "PATH": "mailto:dev@elvinlab.com"
+      "PATH": "/#contacto"
     }
   ],
   "ABOUT_ME": {
-    "SALUTE": "Hola, soy Elvin Gonzalez 👋🏽",
-    "TEXT_SECTION_1": "Desarrollador de Software con más de 3 años de experiencia en proyectos de alto impacto y análisis de datos.",
-    "TEXT_SECTION_2": "Especializado en la extracción, transformación y carga de datos (ETL), optimización de rendimiento y aseguramiento de la seguridad de aplicaciones.",
-    "TEXT_SECTION_3": "Apasionado encolaboración con equipos multidisciplinarios y en la implementación de tecnologías de vanguardia para resolver problemas complejos de manera eficiente y efectiva."
+    "SALUTE": "Hola, soy Elvin Gonzalez",
+    "TEXT_SECTION_1": "Desarrollador de Software con mas de 3 anos de experiencia en proyectos de alto impacto y analisis de datos.",
+    "TEXT_SECTION_2": "Especializado en la extraccion, transformacion y carga de datos (ETL), optimizacion de rendimiento y aseguramiento de la seguridad de aplicaciones.",
+    "TEXT_SECTION_3": "Apasionado en colaboracion con equipos multidisciplinarios y en la implementacion de tecnologias de vanguardia para resolver problemas complejos de manera eficiente y efectiva."
   },
   "TILES": {
     "EXPERIENCE": "Experiencia laboral",
-    "COMPANY_LINK": "Saber más",
-    "LAST_PROJECTS": "Últimos proyectos",
-    "DEMONSTRATIONS": "Demostraciónes"
+    "COMPANY_LINK": "Saber mas",
+    "LAST_PROJECTS": "Ultimos proyectos",
+    "DEMONSTRATIONS": "Demostraciones",
+    "TECH_STACK": "Tech Stack"
+  },
+  "CONTACT": {
+    "TITLE": "Trabajemos juntos",
+    "DESCRIPTION": "Estoy abierto a nuevas oportunidades y colaboraciones. Si tienes un proyecto interesante o simplemente quieres conectar, no dudes en contactarme."
   },
   "BUTTONS": {
-    "RESUME": "Currículo",
+    "RESUME": "Currículum",
     "COPY_BUTTON_LABEL_TILE": "Copiar Email",
-    "COPY_BUTTON_NOTIFICATION": "¡Copiado!",
-    "UPDATES": "Próximamente 🚀"
+    "COPY_BUTTON_NOTIFICATION": "Copiado!",
+    "UPDATES": "Proximamente"
   },
   "EXPERIENCE": [
+    {
+      "COMPANY": "Buo",
+      "POSITION": "Software Engineer Full-stack",
+      "DATE": "Apr 2022 - Present",
+      "DESCRIPTION": "Diseño y desarrollo soluciones de software escalables y de alto rendimiento utilizando JavaScript avanzado (ES6+), Vue, Vuetify y Java con Spring Boot. Implemento arquitecturas robustas aplicando principios SOLID y patrones de diseño para garantizar código limpio, mantenible y fácilmente testeable. Integro soluciones basadas en Inteligencia Artificial para optimizar procesos, mejorar la toma de decisiones y potenciar funcionalidades del negocio. Trabajo en el diseño y consumo de APIs REST, optimización de rendimiento y mejora continua de la experiencia de usuario. Colaboro activamente con equipos multidisciplinarios, aportando visión técnica, buenas prácticas y enfoque estratégico orientado a resultados.",
+      "LINK": "https://www.linkedin.com/company/getbuo",
+      "IMG_LINK": "/imgs/experience/buo.webp",
+      "ALT_TEXT": "Get Buo"
+    },
     {
       "COMPANY": "Blue Zone Consulting Partners",
       "POSITION": "Software Developer",
       "DATE": "Apr 2022 - Apr 2024",
-      "DESCRIPTION": "Como parte del equipo, me encargaba de extraer y transformar datos desde Excel para almacenarlos en AWS S3, asegurando su integridad y seguridad. Supervisé el proceso, documenté el código y trabajé en la visualización de datos para hacerlos comprensibles y atractivos. Además, colaboré con mis colegas para cumplir con los objetivos comerciales, brindando capacitación y apoyo a nuevos empleados en tareas complejas. Utilicé mi experiencia en Java y AngularJS para optimizar el rendimiento y obtener datos de API Rest.",
+      "DESCRIPTION": "Como parte del equipo, me encargaba de extraer y transformar datos desde Excel para almacenarlos en AWS S3, asegurando su integridad y seguridad. Supervise el proceso, documente el codigo y trabaje en la visualizacion de datos para hacerlos comprensibles y atractivos. Ademas, colabore con mis colegas para cumplir con los objetivos comerciales, brindando capacitacion y apoyo a nuevos empleados en tareas complejas. Utilice mi experiencia en Java y AngularJS para optimizar el rendimiento y obtener datos de API Rest.",
       "LINK": "https://www.linkedin.com/company/blue-zone-consulting-partners/",
       "IMG_LINK": "/imgs/experience/bz-img.webp",
       "ALT_TEXT": "Blue Zone Consulting Partners Imagen"
@@ -58,7 +72,7 @@
       "COMPANY": "CNET Technology Systems",
       "POSITION": "Desarrollador full-stack",
       "DATE": "Jun 2021 - Mar 2022",
-      "DESCRIPTION": "Me encargué del análisis, diseño y desarrollo de software utilizando .Net Framework y ReactJS. Implementé estándares de seguridad, lideré proyectos y gestioné clientes para garantizar la calidad. También me ocupé de la documentación, normalización de bases de datos, transformación de datos y capacitación de usuarios. Enfoqué en la selección de tecnologías óptimas y gestioné roles en sistemas administrativos.",
+      "DESCRIPTION": "Me encargue del analisis, diseno y desarrollo de software utilizando .Net Framework y ReactJS. Implemente estandares de seguridad, lidere proyectos y gestione clientes para garantizar la calidad. Tambien me ocupe de la documentacion, normalizacion de bases de datos, transformacion de datos y capacitacion de usuarios. Enfoque en la seleccion de tecnologias optimas y gestione roles en sistemas administrativos.",
       "LINK": "https://www.linkedin.com/company/cnet-technology-system/",
       "IMG_LINK": "/imgs/experience/cnet-img.webp",
       "ALT_TEXT": "CNET Technology Systems Imagen"
@@ -67,20 +81,76 @@
       "COMPANY": "Hacienda el Orosi",
       "POSITION": "Desarrollador de software",
       "DATE": "Oct 2020 - Jun 2021",
-      "DESCRIPTION": "Dirigí proyectos y equipos de desarrollo, desde el análisis hasta la implementación. Utilicé servicios en la nube como Firebase y AWS S3 Bucket, y el stack MERN. Optimicé el manejo de archivos multimedia y gestioné errores en Github. Aseguré la seguridad y funcionalidad del software con pruebas de calidad. Implementé un módulo de contabilidad y capacité a usuarios. Establecí CI/CD y documenté procesos."
+      "DESCRIPTION": "Dirigi proyectos y equipos de desarrollo, desde el analisis hasta la implementacion. Utilice servicios en la nube como Firebase y AWS S3 Bucket, y el stack MERN. Optimice el manejo de archivos multimedia y gestione errores en Github. Asegure la seguridad y funcionalidad del software con pruebas de calidad. Implemente un modulo de contabilidad y capacite a usuarios. Estableci CI/CD y documente procesos."
     },
     {
       "COMPANY": "Julio Celulares",
-      "POSITION": "Técnico de soporte",
+      "POSITION": "Tecnico de soporte",
       "DATE": "Abr 2015 - May 2017",
-      "DESCRIPTION": "Brindé soporte técnico completo para equipos informáticos y móviles, resolviendo problemas de manera efectiva y garantizando la satisfacción del cliente. Manejé consultas, quejas y solicitudes de manera profesional y amigable, logrando altos niveles de satisfacción. Además, gestioné transacciones financieras con precisión como cajero y demostré habilidades de comunicación efectiva, construyendo relaciones sólidas y generando confianza en la marca."
+      "DESCRIPTION": "Brinde soporte tecnico completo para equipos informaticos y moviles, resolviendo problemas de manera efectiva y garantizando la satisfaccion del cliente. Maneje consultas, quejas y solicitudes de manera profesional y amigable, logrando altos niveles de satisfaccion. Ademas, gestione transacciones financieras con precision como cajero y demostre habilidades de comunicacion efectiva, construyendo relaciones solidas y generando confianza en la marca."
     }
   ],
   "PROJECTS": {
+    "PokeQuizAdventureGame": {
+      "ID": "pokequizadventuregame",
+      "TITLE": "Poke Quiz Adventure Game",
+      "DESCRIPTION": "Juego interactivo de preguntas y respuestas inspirado en el universo Pokémon. El proyecto fue desarrollado con Vue 3, Vite y TailwindCSS, integrando Vue Router para la navegación, vue-i18n para internacionalización y Axios para el consumo de APIs. Incluye animaciones con animate.css y componentes UI con Flowbite, ofreciendo una experiencia dinámica, moderna y optimizada para el rendimiento.",
+      "DEPLOY_LINK": "https://poke-quiz-adventure.netlify.app/",
+      "GITHUB_LINK": "https://github.com/elvinlab/PokeQuizAdventureGame",
+      "IMGS": [
+        {
+          "LINK": "/imgs/projects/poke1.webp",
+          "ALT": "imagen PokeQuizAdventureGame principal"
+        },
+        {
+          "LINK": "/imgs/projects/poke2.webp",
+          "ALT": "imagen PokeQuizAdventureGame 1"
+        }
+      ]
+    },
+    "discoveringOwls": {
+      "ID": "discoveringOwls",
+      "TITLE": "Discovering Owls",
+      "DESCRIPTION": "Plataforma de blog desarrollada con Vue 3, TypeScript y Vite, enfocada en la publicación de artículos informativos sobre búhos, incluyendo especies, hábitat y conservación. El proyecto implementa arquitectura modular basada en componentes, navegación SPA y diseño responsive. Integra traducción asistida por IA para generar versiones multidioma de los artículos, optimizando el alcance internacional y mejorando la eficiencia en la producción de contenido.",
+      "DEPLOY_LINK": "https://discovering-owls.netlify.app/",
+      "GITHUB_LINK": "https://github.com/elvinlab/discovering-owls",
+      "IMGS": [
+        {
+          "LINK": "https://muyinteresante.okdiario.com/wp-content/uploads/sites/5/2022/10/12/6345ecf872c9a.jpeg",
+          "ALT": "imagen Discovering Owls principal"
+        }
+      ]
+    },
+    "JSPracticePlayground": {
+      "ID": "js-practice-playground",
+      "TITLE": "JavaScript Practice & Internships",
+      "DESCRIPTION": "Plataforma web donde se recopilan y documentan todas mis prácticas y ejercicios enfocados en el aprendizaje profundo de JavaScript. Este proyecto funciona como un historial de progreso técnico, mostrando distintos retos, conceptos y soluciones aplicadas a lo largo del tiempo. Complementado con un repositorio tipo playground, donde experimento, practico lógica, estructuras de datos y diferentes enfoques de resolución de problemas para fortalecer mis habilidades en el lenguaje.",
+      "DEPLOY_LINK": "https://elvinlab-projects.netlify.app/",
+      "GITHUB_LINK": "https://github.com/elvinlab/js-practice-repo",
+      "IMGS": [
+        {
+          "LINK": "/imgs/projects/jsProject.webp",
+          "ALT": "imagen JavaScript Practice principal"
+        }
+      ]
+    },
+    "EliRecomienda": {
+      "ID": "eli-recomienda",
+      "TITLE": "Eli Recomienda",
+      "DESCRIPTION": "Plataforma web en desarrollo enfocada en la publicación de recomendaciones sobre productos, herramientas, contenido y recursos de interés. El proyecto funciona como un blog dinámico donde se pueden organizar recomendaciones por categorías, destacar contenido relevante y ofrecer una experiencia de lectura clara y atractiva. Está diseñado con una arquitectura modular y escalable, permitiendo futuras mejoras como sistema de etiquetas, filtros, integración con afiliados y optimización SEO.",
+      "DEPLOY_LINK": "https://elirecomienda-temp.netlify.app/",
+      "GITHUB_LINK": "https://github.com/elvinlab/eli-recomienda-template",
+      "IMGS": [
+        {
+          "LINK": "https://static-blog.siteground.com/wp-content/uploads/sites/4/2022/02/what-is-a-blog-1200x600-1.jpeg",
+          "ALT": "imagen Eli Recomienda principal"
+        }
+      ]
+    },
     "HACIENDA": {
       "ID": "hacienda",
       "TITLE": "Hacienda el Orosi",
-      "DESCRIPTION": "Se desarrolló un proyecto interno para una empresa ganadera, abarcando la gestión integral de pagos, colaboradores, préstamos, herramientas, animales, facturación y ventas. Utilizando tecnologías como React, TailwindCSS, Express.JS y MongoDB, se creó una plataforma eficiente y escalable que simplifica las operaciones diarias y potencia la toma de decisiones estratégicas.",
+      "DESCRIPTION": "Se desarrollo un proyecto interno para una empresa ganadera, abarcando la gestion integral de pagos, colaboradores, prestamos, herramientas, animales, facturacion y ventas. Utilizando tecnologias como React, TailwindCSS, Express.JS y MongoDB, se creo una plataforma eficiente y escalable que simplifica las operaciones diarias y potencia la toma de decisiones estrategicas.",
       "DEPLOY_LINK": null,
       "GITHUB_LINK": "https://github.com/elvinlab/hacienda-platform",
       "IMGS": [
@@ -117,8 +187,8 @@
     "SPOTIFY": {
       "ID": "open-spotify",
       "TITLE": "Open Spotify",
-      "DESCRIPTION": "Se llevó a cabo la creación de un proyecto clon de Spotify en React con el objetivo principal de profundizar en el entendimiento y dominio del framework Next.js, en combinación con las potencialidades de React y la versatilidad de Tailwind CSS. Esta iniciativa permitió no solo explorar las funcionalidades y capacidades de estas tecnologías de vanguardia, sino también comprender mejor sus interacciones y cómo pueden ser aprovechadas en el desarrollo de aplicaciones web modernas y eficientes.",
-      "DEPLOY_LINK": "https://open-spotify-plum.vercel.app/",
+      "DESCRIPTION": "Se llevo a cabo la creacion de un proyecto clon de Spotify en React con el objetivo principal de profundizar en el entendimiento y dominio del framework Next.js, en combinacion con las potencialidades de React y la versatilidad de Tailwind CSS.",
+      "DEPLOY_LINK": null,
       "GITHUB_LINK": "https://github.com/elvinlab/open-spotify",
       "IMGS": [
         {
@@ -138,7 +208,7 @@
     "UNAVACUNA": {
       "ID": "una-vacuna",
       "TITLE": "Una Vacuna",
-      "DESCRIPTION": "Desarrollo de un proyecto universitario en Next.js como parte del curso de Aplicaciones Globales 2021. El énfasis se centró en la implementación de gráficas, un sistema de inicio de sesión robusto, y un diseño llamativo y adaptable para la gestión de datos. El proyecto se construyó utilizando tecnologías como Tailwind CSS, React y Next.js.",
+      "DESCRIPTION": "Desarrollo de un proyecto universitario en Next.js como parte del curso de Aplicaciones Globales 2021. El enfasis se centro en la implementacion de graficas, un sistema de inicio de sesion robusto, y un diseno llamativo y adaptable para la gestion de datos.",
       "DEPLOY_LINK": "https://unavacuna.netlify.app/",
       "GITHUB_LINK": "https://github.com/elvinlab/unavacuna",
       "IMGS": [
@@ -171,7 +241,7 @@
     "GUANAMUEBLES": {
       "ID": "guana-muebles",
       "TITLE": "Guana Muebles",
-      "DESCRIPTION": "Durante un proyecto universitario, se diseñó un E-commerce para una empresa que requería una plataforma de ventas en línea. Para presentar el proyecto al público, se realizó una demostración completa. El desarrollo abarcó la creación de un robusto backend utilizando Laravel, mientras que el frontend se construyó con Angular. Se optó por Bootstrap para asegurar un diseño visualmente atractivo y altamente funcional.",
+      "DESCRIPTION": "Durante un proyecto universitario, se diseno un E-commerce para una empresa que requeria una plataforma de ventas en linea. El desarrollo abarco la creacion de un robusto backend utilizando Laravel, mientras que el frontend se construyo con Angular.",
       "DEPLOY_LINK": "https://guana-muebles.web.app/inicio",
       "GITHUB_LINK": "https://github.com/elvinlab/guana-muebles-web",
       "IMGS": [

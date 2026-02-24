@@ -3,7 +3,6 @@ import SocialPill from "@/components/aboutMe/SocialPill.astro";
 import LinkedInIcon from "@/components/icons/LinkedinIcon.astro";
 import GitHubIcon from "@/components/icons/GithubIcon.astro";
 import CvIcon from "@/components/icons/CvIcon.astro";
-
 import { getI18N } from "@/i18n";
 
 const { currentLocale } = Astro;
@@ -33,15 +32,13 @@ const social = [
     icon: GitHubIcon,
   },
 ];
-
-const { class: className } = Astro.props;
 ---
 
-<nav class={`flex  items-center ${className}`}>
+<nav class="flex flex-wrap items-center gap-2">
   {
     social.map((socialItem) => (
       <SocialPill to={socialItem.link}>
-        <socialItem.icon class="size-5 mr-1" />
+        <socialItem.icon class="size-4 mr-1.5" />
         {socialItem.media}
       </SocialPill>
     ))

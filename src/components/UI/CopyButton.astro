@@ -10,24 +10,21 @@ const i18n = getI18N({ currentLocale });
   id="copy-button"
   title={i18n.BUTTONS.COPY_BUTTON_LABEL_TILE}
   aria-label={i18n.BUTTONS.COPY_BUTTON_LABEL_TILE}
-  class="bg-inherit group"
+  class="px-2 py-2 text-slate-500 dark:text-slate-400 hover:text-accent-dark dark:hover:text-accent transition-colors duration-200 border-l border-slate-300 dark:border-slate-700"
 >
-  <CopyIcon
-    class="text-white opacity-50 group-hover:scale-110 group-hover:opacity-100 transition-all duration-300"
-  />
+  <CopyIcon class="size-4" />
 </button>
 
 <script is:inline>
-  const EMAIL = "dev@elvinlab.com";
-  const copyButton = document.getElementById("copy-button");
-  const btnNotificationFromCopyBtn = document.getElementById(
-    "notification-copy-btn"
-  );
-
   function copyEmailToClipBoard() {
+    const EMAIL = "elvinlab@outlook.com";
+    const copyButton = document.getElementById("copy-button");
+    const btnNotificationFromCopyBtn = document.getElementById(
+      "notification-copy-btn",
+    );
     btnNotificationFromCopyBtn.classList.toggle(
       "hidden",
-      !btnNotificationFromCopyBtn.classList.contains("hidden")
+      !btnNotificationFromCopyBtn.classList.contains("hidden"),
     );
 
     setTimeout(() => {
@@ -37,5 +34,7 @@ const i18n = getI18N({ currentLocale });
     return window.navigator.clipboard.writeText(EMAIL);
   }
 
-  copyButton?.addEventListener("click", copyEmailToClipBoard);
+  document
+    .getElementById("copy-button")
+    ?.addEventListener("click", copyEmailToClipBoard);
 </script>

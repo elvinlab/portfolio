@@ -1,75 +1,110 @@
 ---
-import CarouselButtons from "./CarouselButtons.astro";
-import CarouselItems from "./CarouselItems.astro";
-
 interface Props {
+  id: string;
   imgs: {
     LINK: string;
     ALT: string;
   }[];
 }
 
-const { imgs } = Astro.props;
+const { imgs, id } = Astro.props;
+const carouselId = `carousel-${id}`;
 ---
 
-<div id="default-carousel" class="relative w-full" data-carousel="static">
-  <div class="relative h-56 overflow-hidden rounded-lg md:h-[500px]">
-    {imgs.map((img) => <CarouselItems {...img} />)}
+<div id={carouselId} class="relative w-full">
+  <div class="relative overflow-hidden rounded-lg aspect-video bg-slate-100 dark:bg-slate-800">
+    {
+      imgs.map((img, i) => (
+        <div
+          class={`carousel-slide absolute inset-0 transition-opacity duration-500 ease-in-out ${i === 0 ? "opacity-100" : "opacity-0"}`}
+          data-index={i}
+        >
+          <img
+            src={img.LINK}
+            class="w-full h-full object-contain"
+            alt={img.ALT}
+            loading="lazy"
+          />
+        </div>
+      ))
+    }
+  </div>
 
-    <div
-      class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse"
-    >
-      {imgs.map(({ ALT }, i) => <CarouselButtons alt={ALT} index={i} />)}
-    </div>
+  <div class="flex items-center justify-center gap-2 mt-4">
     <button
       type="button"
-      class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-      data-carousel-prev
+      class="carousel-prev p-2 rounded-lg text-slate-500 dark:text-slate-400 hover:text-accent-dark dark:hover:text-accent hover:bg-accent-muted transition-colors"
+      aria-label="Previous slide"
     >
-      <span
-        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
-      >
-        <svg
-          class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 6 10"
-        >
-          <path
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M5 1 1 5l4 4"></path>
-        </svg>
-        <span class="sr-only">Previous</span>
-      </span>
+      <svg class="w-5 h-5" fill="none" viewBox="0 0 6 10" xmlns="http://www.w3.org/2000/svg">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"></path>
+      </svg>
     </button>
+
+    <div class="flex items-center gap-1.5">
+      {
+        imgs.map((_, i) => (
+          <button
+            type="button"
+            class={`carousel-dot w-2 h-2 rounded-full transition-all duration-300 ${i === 0 ? "bg-accent w-6" : "bg-slate-300 dark:bg-slate-600"}`}
+            data-dot-index={i}
+            aria-label={`Go to slide ${i + 1}`}
+          />
+        ))
+      }
+    </div>
+
     <button
       type="button"
-      class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-      data-carousel-next
+      class="carousel-next p-2 rounded-lg text-slate-500 dark:text-slate-400 hover:text-accent-dark dark:hover:text-accent hover:bg-accent-muted transition-colors"
+      aria-label="Next slide"
     >
-      <span
-        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
-      >
-        <svg
-          class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 6 10"
-        >
-          <path
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="m1 9 4-4-4-4"></path>
-        </svg>
-        <span class="sr-only">Next</span>
-      </span>
+      <svg class="w-5 h-5" fill="none" viewBox="0 0 6 10" xmlns="http://www.w3.org/2000/svg">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"></path>
+      </svg>
     </button>
   </div>
 </div>
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll("[id^='carousel-']").forEach((carousel) => {
+      const slides = carousel.querySelectorAll(".carousel-slide");
+      const dots = carousel.querySelectorAll(".carousel-dot");
+      const prevBtn = carousel.querySelector(".carousel-prev");
+      const nextBtn = carousel.querySelector(".carousel-next");
+      let current = 0;
+
+      function goTo(index) {
+        slides.forEach((s, i) => {
+          s.classList.toggle("opacity-100", i === index);
+          s.classList.toggle("opacity-0", i !== index);
+        });
+        dots.forEach((d, i) => {
+          if (i === index) {
+            d.classList.add("bg-accent", "w-6");
+            d.classList.remove("bg-slate-300", "dark:bg-slate-600");
+          } else {
+            d.classList.remove("bg-accent", "w-6");
+            d.classList.add("bg-slate-300", "dark:bg-slate-600");
+          }
+        });
+        current = index;
+      }
+
+      prevBtn?.addEventListener("click", () => {
+        goTo(current <= 0 ? slides.length - 1 : current - 1);
+      });
+
+      nextBtn?.addEventListener("click", () => {
+        goTo(current >= slides.length - 1 ? 0 : current + 1);
+      });
+
+      dots.forEach((dot) => {
+        dot.addEventListener("click", () => {
+          goTo(Number(dot.getAttribute("data-dot-index")));
+        });
+      });
+    });
+  });
+</script>

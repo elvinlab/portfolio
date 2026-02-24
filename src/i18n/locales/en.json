@@ -16,35 +16,49 @@
       "PATH": "/en/#projects"
     },
     {
-      "TITLE": "About me",
-      "LABEL": "about-me",
-      "PATH": "/en/#about-me"
+      "TITLE": "Tech Stack",
+      "LABEL": "tech-stack",
+      "PATH": "/en/#tech-stack"
     },
     {
       "TITLE": "Contact",
       "LABEL": "contact",
-      "PATH": "mailto:dev@elvinlab.com"
+      "PATH": "/en/#contact"
     }
   ],
   "ABOUT_ME": {
-    "SALUTE": "Hi, I'm Elvin Gonzalez 👋🏽",
+    "SALUTE": "Hi, I'm Elvin Gonzalez",
     "TEXT_SECTION_1": "Software Developer with over 3 years of experience in high-impact projects and data analysis.",
-    "TEXT_SECTION_2": "Specialized in data extraction, transformation, and loading (ETL), performance optimization, and application security assurance. ",
+    "TEXT_SECTION_2": "Specialized in data extraction, transformation, and loading (ETL), performance optimization, and application security assurance.",
     "TEXT_SECTION_3": "Expert in collaborating with multidisciplinary teams and implementing cutting-edge technologies to efficiently and effectively solve complex problems."
   },
   "TILES": {
     "EXPERIENCE": "Work experience",
     "COMPANY_LINK": "Learn more",
-    "LAST_PROJECTS": "Last projects",
-    "DEMONSTRATIONS": "Demonstrations"
+    "LAST_PROJECTS": "Latest projects",
+    "DEMONSTRATIONS": "Demonstrations",
+    "TECH_STACK": "Tech Stack"
+  },
+  "CONTACT": {
+    "TITLE": "Let's work together",
+    "DESCRIPTION": "I'm open to new opportunities and collaborations. If you have an interesting project or simply want to connect, feel free to reach out."
   },
   "BUTTONS": {
     "RESUME": "Resume",
     "COPY_BUTTON_LABEL_TILE": "Copy Email",
-    "COPY_BUTTON_NOTIFICATION": "Copy!",
-    "UPDATES": "Soon 🚀"
+    "COPY_BUTTON_NOTIFICATION": "Copied!",
+    "UPDATES": "Coming soon"
   },
   "EXPERIENCE": [
+    {
+      "COMPANY": "Buo",
+      "POSITION": "Software Engineer Full-stack",
+      "DATE": "Apr 2022 - Present",
+      "DESCRIPTION": "I design and develop scalable, high-performance software solutions using advanced JavaScript (ES6+), Vue, Vuetify, and Java with Spring Boot. I implement robust architectures applying SOLID principles and design patterns to ensure clean, maintainable, and easily testable code. I integrate Artificial Intelligence-based solutions to optimize processes, enhance decision-making, and strengthen business capabilities. I work on REST API design and integration, performance optimization, and continuous user experience improvement. I actively collaborate with cross-functional teams, contributing technical vision, best practices, and a results-driven strategic approach.",
+      "LINK": "https://www.linkedin.com/company/getbuo",
+      "IMG_LINK": "/imgs/experience/buo.webp",
+      "ALT_TEXT": "Get Buo"
+    },
     {
       "COMPANY": "Blue Zone Consulting Partners",
       "POSITION": "Software Developer",
@@ -77,10 +91,98 @@
     }
   ],
   "PROJECTS": {
+    "PokeQuizAdventureGame": {
+      "ID": "pokequizadventuregame",
+      "TITLE": "Poke Quiz Adventure Game",
+      "DESCRIPTION": "An interactive quiz game inspired by the Pokémon universe. The project was developed using Vue 3, Vite, and TailwindCSS, integrating Vue Router for navigation, vue-i18n for internationalization, and Axios for API consumption. It includes animations powered by animate.css and UI components from Flowbite, delivering a dynamic, modern, and performance-optimized user experience.",
+      "DEPLOY_LINK": "https://poke-quiz-adventure.netlify.app/",
+      "GITHUB_LINK": "https://github.com/elvinlab/PokeQuizAdventureGame",
+      "IMGS": [
+        {
+          "LINK": "/imgs/projects/pokequiz-main.webp",
+          "ALT": "PokeQuizAdventureGame main image"
+        },
+        {
+          "LINK": "/imgs/projects/pokequiz-1.webp",
+          "ALT": "PokeQuizAdventureGame image 1"
+        },
+        {
+          "LINK": "/imgs/projects/pokequiz-2.webp",
+          "ALT": "PokeQuizAdventureGame image 2"
+        },
+        {
+          "LINK": "/imgs/projects/pokequiz-3.webp",
+          "ALT": "PokeQuizAdventureGame image 3"
+        }
+      ]
+    },
+    "discoveringOwls": {
+      "ID": "discoveringOwls",
+      "TITLE": "Discovering Owls",
+      "DESCRIPTION": "A blog platform developed with Vue 3, TypeScript, and Vite, focused on publishing informative articles about owls, including species, habitats, and conservation. The project implements a modular component-based architecture, SPA navigation, and a responsive design. It integrates AI-assisted translation to generate multilingual versions of the articles, expanding international reach and improving content production efficiency.",
+      "DEPLOY_LINK": "https://discovering-owls.netlify.app/",
+      "GITHUB_LINK": "https://github.com/elvinlab/discovering-owls",
+      "IMGS": [
+        {
+          "LINK": "/imgs/projects/discovering-owls-main.webp",
+          "ALT": "Discovering Owls main image"
+        },
+        {
+          "LINK": "/imgs/projects/discovering-owls-1.webp",
+          "ALT": "Discovering Owls image 1"
+        },
+        {
+          "LINK": "/imgs/projects/discovering-owls-2.webp",
+          "ALT": "Discovering Owls image 2"
+        }
+      ]
+    },
+    "JSPracticePlayground": {
+      "ID": "js-practice-playground",
+      "TITLE": "JavaScript Practice & Internships",
+      "DESCRIPTION": "A web platform that compiles and documents all my practice work and exercises focused on mastering JavaScript. This project serves as a technical progress record, showcasing different challenges, concepts, and solutions applied over time. It is complemented by a playground-style repository where I experiment, practice logic, data structures, and multiple problem-solving approaches to continuously strengthen my skills in the language.",
+      "DEPLOY_LINK": "https://elvinlab-projects.netlify.app/",
+      "GITHUB_LINK": "https://github.com/elvinlab/js-practice-repo",
+      "IMGS": [
+        {
+          "LINK": "/imgs/projects/js-practice-main.webp",
+          "ALT": "JavaScript Practice main image"
+        },
+        {
+          "LINK": "/imgs/projects/js-practice-1.webp",
+          "ALT": "JavaScript Practice image 1"
+        },
+        {
+          "LINK": "/imgs/projects/js-practice-2.webp",
+          "ALT": "JavaScript Practice image 2"
+        }
+      ]
+    },
+    "EliRecomienda": {
+      "ID": "eli-recomienda",
+      "TITLE": "Eli Recommends",
+      "DESCRIPTION": "A web platform currently under development focused on publishing recommendations about products, tools, content, and useful resources. The project functions as a dynamic blog where recommendations can be organized by categories, highlight featured content, and provide a clean and engaging reading experience. It is designed with a modular and scalable architecture, allowing future enhancements such as tag systems, filtering, affiliate integrations, and SEO optimization.",
+      "DEPLOY_LINK": "https://elirecomienda-temp.netlify.app/",
+      "GITHUB_LINK": "https://github.com/elvinlab/eli-recomienda-template",
+      "IMGS": [
+        {
+          "LINK": "/imgs/projects/eli-recomienda-main.webp",
+          "ALT": "Eli Recommends main image"
+        },
+        {
+          "LINK": "/imgs/projects/eli-recomienda-1.webp",
+          "ALT": "Eli Recommends image 1"
+        },
+        {
+          "LINK": "/imgs/projects/eli-recomienda-2.webp",
+          "ALT": "Eli Recommends image 2"
+        }
+      ]
+    },
     "HACIENDA": {
       "ID": "Hacienda",
       "TITLE": "Hacienda el Orosi",
-      "DESCRIPTION": "An internal project was developed for a livestock company, encompassing comprehensive management of payments, employees, loans, tools, animals, billing, and sales. Utilizing technologies such as React, TailwindCSS, Express.JS, and MongoDB, an efficient and scalable platform was created, simplifying daily operations and empowering strategic decision-making.",
+      "DESCRIPTION": "An internal project was developed for a livestock company, encompassing comprehensive management of payments, employees, loans, tools, animals, billing, and sales. Utilizing technologies such as React, TailwindCSS, Express.JS, and MongoDB, an efficient and scalable platform was created.",
       "DEPLOY_LINK": null,
       "GITHUB_LINK": "https://github.com/elvinlab/hacienda-platform",
       "IMGS": [
@@ -117,8 +219,8 @@
     "SPOTIFY": {
       "ID": "open-spotify",
       "TITLE": "Open Spotify",
-      "DESCRIPTION": "The creation of a React clone project was undertaken with the main goal of deepening understanding and mastery of the Next.js framework, in combination with the capabilities of React and the versatility of Tailwind CSS. This initiative not only allowed for exploration of the features and capabilities of these cutting-edge technologies, but also facilitated a better understanding of their interactions and how they can be leveraged in the development of modern and efficient web applications.",
-      "DEPLOY_LINK": "https://open-spotify-plum.vercel.app/",
+      "DESCRIPTION": "A Spotify clone project was built to deepen understanding of Next.js, React, and Tailwind CSS. This initiative explored the capabilities of these cutting-edge technologies and how they can be leveraged in modern web applications.",
+      "DEPLOY_LINK": null,
       "GITHUB_LINK": "https://github.com/elvinlab/open-spotify",
       "IMGS": [
         {
@@ -138,7 +240,7 @@
     "UNAVACUNA": {
       "ID": "una-vacuna",
       "TITLE": "Una Vacuna",
-      "DESCRIPTION": "Development of a university project in Next.js as part of the Global Applications 2021 course. The emphasis was placed on implementing graphics, a robust login system, and an eye-catching, adaptable design for data management. The project was built using technologies such as Tailwind CSS, React, and Next.js.",
+      "DESCRIPTION": "A university project in Next.js for the Global Applications 2021 course. Focused on implementing graphics, a robust login system, and an eye-catching, adaptable design for data management using Tailwind CSS, React, and Next.js.",
       "DEPLOY_LINK": "https://unavacuna.netlify.app/",
       "GITHUB_LINK": "https://github.com/elvinlab/unavacuna",
       "IMGS": [
@@ -171,13 +273,13 @@
     "GUANAMUEBLES": {
       "ID": "guana-muebles",
       "TITLE": "Guana Muebles",
-      "DESCRIPTION": "During a university project, an E-commerce platform was designed for a company in need of an online sales platform. To showcase the project to the public, a comprehensive demonstration was conducted. The development involved creating a robust backend using Laravel, while the frontend was built with Angular. Bootstrap was chosen to ensure visually appealing and highly functional design.",
+      "DESCRIPTION": "An E-commerce platform designed for a company needing an online sales solution. The development involved creating a robust backend using Laravel, while the frontend was built with Angular and Bootstrap for a visually appealing and functional design.",
       "DEPLOY_LINK": "https://guana-muebles.web.app/inicio",
       "GITHUB_LINK": "https://github.com/elvinlab/guana-muebles-web",
       "IMGS": [
         {
           "LINK": "/imgs/projects/guana-muebles-main.webp",
-          "ALT": "imageGuana Muebles principal"
+          "ALT": "image Guana Muebles main"
         },
         {
           "LINK": "/imgs/projects/guana-muebles-1.webp",

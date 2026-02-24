@@ -1,8 +1,8 @@
 ---
 import SocialMedia from "@/components/aboutMe/SocialMedia.astro";
 import EmailContact from "@/components/aboutMe/EmailContact.astro";
-import { getI18N } from "@/i18n";
 import Notification from "../UI/Notification.astro";
+import { getI18N } from "@/i18n";
 
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
@@ -13,18 +13,18 @@ const i18n = getI18N({ currentLocale });
   msg={i18n.BUTTONS.COPY_BUTTON_NOTIFICATION}
 />
 
-<div class="m-8">
-  <h2 class="text-xl lg:text-xl text-pretty text-black dark:text-white">
-    <span> {i18n.ABOUT_ME.TEXT_SECTION_1}</span>
-    <span class="text-yellow-800 dark:text-yellow-200">
+<div class="mt-8">
+  <p class="text-lg lg:text-xl leading-relaxed text-slate-700 dark:text-slate-300 text-pretty">
+    <span>{i18n.ABOUT_ME.TEXT_SECTION_1}</span>{" "}
+    <span class="text-accent-dark dark:text-accent font-medium">
       {i18n.ABOUT_ME.TEXT_SECTION_2}
-    </span>
-    <span class="text-red-800 dark:text-red-200">
+    </span>{" "}
+    <span class="text-slate-500 dark:text-slate-400">
       {i18n.ABOUT_ME.TEXT_SECTION_3}
     </span>
-  </h2>
+  </p>
 </div>
-<div class="flex flex-col justify-center items-center">
+<div class="mt-8 flex flex-col items-center sm:items-start gap-4">
   <SocialMedia />
   <EmailContact />
 </div>

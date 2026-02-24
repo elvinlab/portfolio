@@ -9,19 +9,20 @@ const translatePath = useTranslatedPath(lang);
 
 <div class="relative inline-block text-left">
   <button
-    class="language-button rounded-3xl border p-1 border-zinc-400 dark:border-zinc-400 font-bold shadow-sm hover:bg-orange-200 dark:hover:bg-zinc-800 transition-all duration-300"
+    class="language-button rounded-full border border-slate-300 dark:border-slate-700 p-1.5 text-slate-600 dark:text-slate-400 hover:border-accent dark:hover:border-accent hover:text-accent-dark dark:hover:text-accent transition-all duration-200"
+    aria-label="Change language"
   >
-    <Language class="h-8 w-8" />
+    <Language class="h-5 w-5" />
   </button>
   <ul
-    class="hidden absolute right-0 z-10 mt-2 origin-top-right rounded-md border border-zinc-400 dark:border-zinc-700 bg-orange-50 dark:bg-zinc-800 shadow-xl ring-1 ring-black ring-opacity-5 focus:outline-none divide-zinc-400 dark:divide-zinc-700 hidden-language-menu"
+    class="hidden absolute right-0 z-10 mt-2 min-w-[120px] origin-top-right rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-lg hidden-language-menu overflow-hidden"
   >
     {
       Object.entries(languages).map(([langPrefix, langName]) => {
         return (
           <li>
             <a
-              class="block px-4 py-2 text-sm hover:underline"
+              class="block px-4 py-2.5 text-sm text-slate-700 dark:text-slate-300 hover:bg-accent-muted hover:text-accent-dark dark:hover:text-accent transition-colors"
               href={translatePath("/", langPrefix)}
             >
               {langName}

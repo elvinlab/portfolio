@@ -9,14 +9,11 @@ const { id, msg } = Astro.props;
 
 <span
   id={id}
-  class="hidden max-w-s fixed m-4 lg:right-5 top-20 p-3 rounded-md border border-zinc-400 dark:border-zinc-700 bg-orange-50 dark:bg-zinc-800 shadow-xl ring-1 ring-black ring-opacity-5 focus:outline-none divide-zinc-400 dark:divide-zinc-700 transition duration-300"
+  class="hidden max-w-xs fixed m-4 lg:right-5 top-20 z-[600] p-3 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-lg transition duration-300"
 >
   <span class="relative h-3 w-3">
-    <span
-      class="animate-ping absolute h-full w-3/5 rounded-full bg-orange-400 opacity-75"
-    ></span>
-    <span class="relative inline-flex rounded-full h-3 w-3 bg-orange-500"
-    ></span>
+    <span class="animate-ping absolute h-full w-3/5 rounded-full bg-accent opacity-75"></span>
+    <span class="relative inline-flex rounded-full h-3 w-3 bg-accent-dark"></span>
   </span>
-  <span class="text-md">{msg}</span>
+  <span class="text-sm text-slate-700 dark:text-slate-300 ml-1">{msg}</span>
 </span>

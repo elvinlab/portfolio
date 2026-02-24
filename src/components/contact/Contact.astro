@@ -1,0 +1,21 @@
+---
+import SocialMedia from "@/components/aboutMe/SocialMedia.astro";
+import EmailContact from "@/components/aboutMe/EmailContact.astro";
+import { getI18N } from "@/i18n";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+---
+
+<div class="text-center">
+  <h3 class="text-3xl font-bold text-slate-900 dark:text-white text-balance">
+    {i18n.CONTACT.TITLE}
+  </h3>
+  <p class="mt-4 text-lg text-slate-600 dark:text-slate-400 max-w-xl mx-auto text-pretty">
+    {i18n.CONTACT.DESCRIPTION}
+  </p>
+  <div class="mt-8 flex flex-col items-center gap-4">
+    <EmailContact />
+    <SocialMedia />
+  </div>
+</div>

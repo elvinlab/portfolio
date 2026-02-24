@@ -20,25 +20,23 @@ const { COMPANY, POSITION, DATE, DESCRIPTION, LINK, IMG_LINK, ALT_TEXT } =
 ---
 
 <div
-  class="relative grid mx-12 pb-12 before:absolute before:left-[-40px] before:block before:h-full before:border-l-8 before:border-black/20 dark:before:border-white/15 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]"
+  class="relative grid mx-4 sm:mx-12 pb-12 before:absolute before:left-[-24px] sm:before:left-[-40px] before:block before:h-full before:border-l-2 before:border-slate-200 dark:before:border-slate-800 before:content-[''] md:grid-cols-5 md:gap-10"
 >
-  <div class="relative pb-12 md:col-span-2">
-    <div class="sticky top-0">
-      <span class="text-yellow-500 -left-[64px] absolute rounded-full text-8xl"
-        >&bull;</span
-      >
+  <div class="relative pb-8 md:pb-12 md:col-span-2">
+    <div class="sticky top-20">
+      <span class="absolute -left-[30px] sm:-left-[46px] top-1 h-3 w-3 rounded-full border-2 border-accent bg-white dark:bg-[#0a0f1e]"></span>
 
-      <h3 class="text-xl font-bold text-yellow-500">{COMPANY}</h3>
-      <h4 class="font-semibold text-md text-gray-600 dark:text-white italic">
+      <h3 class="text-lg font-bold text-slate-900 dark:text-white">{COMPANY}</h3>
+      <h4 class="font-medium text-sm text-accent-dark dark:text-accent">
         {POSITION}
       </h4>
-      <time class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80"
-        >{DATE}</time
-      >
+      <time class="text-xs text-slate-500 dark:text-slate-500 font-mono">
+        {DATE}
+      </time>
       {
         IMG_LINK && ALT_TEXT && (
           <img
-            class="size-[180px] mt-2 rounded-md mx-auto shadow-xl shadow-amber-100"
+            class="w-[140px] mt-3 rounded-lg border border-slate-200 dark:border-slate-800"
             src={IMG_LINK}
             alt={ALT_TEXT}
           />
@@ -47,7 +45,7 @@ const { COMPANY, POSITION, DATE, DESCRIPTION, LINK, IMG_LINK, ALT_TEXT } =
     </div>
   </div>
   <div
-    class="relative flex flex-col gap-2 pb-4 text-gray-600 dark:text-gray-300 md:col-span-3"
+    class="relative flex flex-col gap-3 pb-4 text-sm leading-relaxed text-slate-600 dark:text-slate-400 md:col-span-3"
   >
     {DESCRIPTION}
     {
@@ -56,7 +54,7 @@ const { COMPANY, POSITION, DATE, DESCRIPTION, LINK, IMG_LINK, ALT_TEXT } =
           {i18n.TILES.COMPANY_LINK}
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="w-5 icon icon-tabler icon-tabler-chevron-right"
+            class="w-4 ml-1"
             width="24"
             height="24"
             viewBox="0 0 24 24"

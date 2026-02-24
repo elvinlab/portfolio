@@ -13,6 +13,8 @@ import NodeIcon from "../icons/NodeIcon.astro";
 import FirebaseIcon from "../icons/FirebaseIcon.astro";
 import AngularIcon from "../icons/AngularIcon.astro";
 import LaravelIcon from "../icons/LaravelIcon.astro";
+import VueIcon from "../icons/VueIcon.astro";
+import AstroIcon from "../icons/AstroIcon.astro";
 import MySqlIcon from "../icons/MySqlIcon.astro";
 import { getI18N } from "@/i18n";
 
@@ -22,56 +24,107 @@ const i18n = getI18N({ currentLocale });
 const TAGS = {
   NEXT: {
     name: "Next.js",
-    class: "bg-[#0d151d] text-white",
+    class: "bg-slate-900 text-white dark:bg-slate-700",
     icon: NextJSIcon,
   },
   TAILWIND: {
     name: "TailwindCSS",
-    class: "bg-[#003159] text-white",
+    class: "bg-cyan-900/80 text-cyan-100",
     icon: TailwindIcon,
   },
   REACT: {
     name: "React",
-    class: "bg-[#0e7696] text-white ",
+    class: "bg-sky-900/80 text-sky-100",
     icon: ReactIcon,
   },
   MATERIAL: {
     name: "Material UI",
-    class: "bg-[#0056a1] text-white",
+    class: "bg-blue-900/80 text-blue-100",
     icon: MaterialIcon,
   },
   MONGODB: {
     name: "MongoDB",
-    class: "bg-[#018946] text-white",
+    class: "bg-emerald-900/80 text-emerald-100",
     icon: MongoDBIcon,
   },
   NODE: {
     name: "Node.js",
-    class: "bg-[#38642c] text-white",
+    class: "bg-green-900/80 text-green-100",
     icon: NodeIcon,
   },
   FIREBASE: {
     name: "Firebase",
-    class: "bg-[#a95912] text-white",
+    class: "bg-amber-900/80 text-amber-100",
     icon: FirebaseIcon,
   },
   ANGULAR: {
     name: "Angular",
-    class: "bg-[#430211] text-white",
+    class: "bg-red-900/80 text-red-100",
     icon: AngularIcon,
   },
   LARAVEL: {
     name: "Laravel",
-    class: "bg-[#481010] text-white",
+    class: "bg-rose-900/80 text-rose-100",
     icon: LaravelIcon,
   },
   MYSQL: {
     name: "MySQL",
-    class: "bg-[#0499c4] text-white",
+    class: "bg-blue-800/80 text-blue-100",
     icon: MySqlIcon,
   },
+  VUE: {
+    name: "Vue.js",
+    class: "bg-green-800/80 text-green-100",
+    icon: VueIcon,
+  },
+  ASTRO: {
+    name: "Astro",
+    class: "bg-purple-800/80 text-purple-100",
+    icon: AstroIcon,
+  },
 };
+
 const PROJECTS = [
+  {
+    id: i18n.PROJECTS.PokeQuizAdventureGame.ID,
+    title: i18n.PROJECTS.PokeQuizAdventureGame.TITLE,
+    description: i18n.PROJECTS.PokeQuizAdventureGame.DESCRIPTION,
+    link: i18n.PROJECTS.PokeQuizAdventureGame.DEPLOY_LINK,
+    github: i18n.PROJECTS.PokeQuizAdventureGame.GITHUB_LINK,
+    image: i18n.PROJECTS.PokeQuizAdventureGame.IMGS[0].LINK,
+    tags: [TAGS.TAILWIND, TAGS.VUE, TAGS.NODE],
+    imgs: i18n.PROJECTS.PokeQuizAdventureGame.IMGS,
+  },
+  {
+    id: i18n.PROJECTS.discoveringOwls.ID,
+    title: i18n.PROJECTS.discoveringOwls.TITLE,
+    description: i18n.PROJECTS.discoveringOwls.DESCRIPTION,
+    link: i18n.PROJECTS.discoveringOwls.DEPLOY_LINK,
+    github: i18n.PROJECTS.discoveringOwls.GITHUB_LINK,
+    image: i18n.PROJECTS.discoveringOwls.IMGS[0].LINK,
+    tags: [TAGS.TAILWIND, TAGS.VUE, TAGS.NODE],
+    imgs: i18n.PROJECTS.discoveringOwls.IMGS,
+  },
+  {
+    id: i18n.PROJECTS.JSPracticePlayground.ID,
+    title: i18n.PROJECTS.JSPracticePlayground.TITLE,
+    description: i18n.PROJECTS.JSPracticePlayground.DESCRIPTION,
+    link: i18n.PROJECTS.JSPracticePlayground.DEPLOY_LINK,
+    github: i18n.PROJECTS.JSPracticePlayground.GITHUB_LINK,
+    image: i18n.PROJECTS.JSPracticePlayground.IMGS[0].LINK,
+    tags: [TAGS.NODE],
+    imgs: i18n.PROJECTS.JSPracticePlayground.IMGS,
+  },
+  {
+    id: i18n.PROJECTS.EliRecomienda.ID,
+    title: i18n.PROJECTS.EliRecomienda.TITLE,
+    description: i18n.PROJECTS.EliRecomienda.DESCRIPTION,
+    link: i18n.PROJECTS.EliRecomienda.DEPLOY_LINK,
+    github: i18n.PROJECTS.EliRecomienda.GITHUB_LINK,
+    image: i18n.PROJECTS.EliRecomienda.IMGS[0].LINK,
+    tags: [TAGS.TAILWIND, TAGS.ASTRO],
+    imgs: i18n.PROJECTS.EliRecomienda.IMGS,
+  },
   {
     id: i18n.PROJECTS.HACIENDA.ID,
     title: i18n.PROJECTS.HACIENDA.TITLE,
@@ -122,9 +175,9 @@ const PROJECTS = [
 ---
 
 <h3
-  class="flex items-center mb-6 text-2xl font-semibold gap-x-3 text-black/80 dark:text-white"
+  class="flex items-center mb-10 text-2xl font-semibold gap-x-3 text-slate-900 dark:text-white"
 >
-  <CodeIcon class="size-7" />
+  <CodeIcon class="size-5 text-accent-dark dark:text-accent" />
   {i18n.TILES.LAST_PROJECTS}
 </h3>
 
@@ -132,57 +185,55 @@ const PROJECTS = [
   {
     PROJECTS.map(
       ({ image, title, description, tags, link, github, imgs, id }) => (
-        <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+        <article class="flex flex-col gap-8 group md:flex-row">
           <Modal id={id} imgs={imgs} />
           <div class="w-full md:w-1/2">
-            <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+            <div class="relative overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 transition-all duration-300 group-hover:border-accent/30 group-hover:shadow-lg group-hover:shadow-accent/5">
               <img
                 onclick={`document.getElementById('projectModal-${id}').showModal();`}
                 alt={title}
-                class="object-cover object-top w-full h-48 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105 cursor-pointer"
+                class="object-cover object-top w-full h-48 sm:h-64 md:h-full transition-transform duration-500 group-hover:scale-[1.02] cursor-pointer"
                 loading="lazy"
                 src={image}
               />
             </div>
           </div>
-          <div class="w-full md:w-1/2 md:max-w-lg">
-            <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+          <div class="w-full md:w-1/2 flex flex-col justify-center">
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white">
               {title}
             </h3>
-            <div class="flex flex-wrap mt-2">
-              <div class="mt-2 text-gray-600 dark:text-gray-300">
-                {description}
-              </div>
-              <ul class="mt-4 flex flex-wrap gap-x-2 gap-y-1 flex-row mb-2">
-                {tags.map((tag) => (
-                  <li>
-                    <span
-                      class={`flex gap-x-2  rounded-full text-xs ${tag.class} text-nowrap py-1 px-2 `}
-                    >
-                      <tag.icon class="size-4" />
-                      {tag.name}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-              <footer class="flex items-end justify-start mt-4 gap-x-4">
-                {github && (
-                  <LinkButton href={github}>
-                    <GitHubAltIcon class="size-6" />
-                    Code
-                  </LinkButton>
-                )}
-                {link && (
-                  <LinkButton href={link}>
-                    <LinkIcon class="size-4" />
-                    Demo
-                  </LinkButton>
-                )}
-              </footer>
-            </div>
+            <p class="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+              {description}
+            </p>
+            <ul class="mt-4 flex flex-wrap gap-2">
+              {tags.map((tag) => (
+                <li>
+                  <span
+                    class={`flex items-center gap-x-1.5 rounded-full text-xs py-1 px-2.5 ${tag.class}`}
+                  >
+                    <tag.icon class="size-3.5" />
+                    {tag.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <footer class="flex items-center mt-6 gap-x-3">
+              {github && (
+                <LinkButton href={github}>
+                  <GitHubAltIcon class="size-4" />
+                  Code
+                </LinkButton>
+              )}
+              {link && (
+                <LinkButton href={link}>
+                  <LinkIcon class="size-3.5" />
+                  Demo
+                </LinkButton>
+              )}
+            </footer>
           </div>
         </article>
-      )
+      ),
     )
   }
 </div>

@@ -1,26 +1,20 @@
-<div class="box">
-  <span
-    class="box__arrow border-b-black border-r-black dark:border-b-white dark:border-r-white"
-  ></span>
-  <span
-    class="box__arrow border-b-black border-r-black dark:border-b-white dark:border-r-white"
-  ></span>
-  <span
-    class="box__arrow border-b-black border-r-black dark:border-b-white dark:border-r-white"
-  ></span>
+<div class="box mt-8">
+  <span class="box__arrow border-b-slate-400 border-r-slate-400 dark:border-b-slate-600 dark:border-r-slate-600"></span>
+  <span class="box__arrow border-b-slate-400 border-r-slate-400 dark:border-b-slate-600 dark:border-r-slate-600"></span>
+  <span class="box__arrow border-b-slate-400 border-r-slate-400 dark:border-b-slate-600 dark:border-r-slate-600"></span>
 </div>
 
 <style>
   .box .box__arrow {
     display: block;
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     border-bottom-style: solid;
     border-bottom-width: 1px;
     border-right-style: solid;
-    border-right-width: 3px;
+    border-right-width: 2px;
     transform: rotate(45deg);
-    margin: -10px;
+    margin: -8px;
     animation: animate 2s infinite;
   }
 
@@ -35,16 +29,14 @@
   @keyframes animate {
     0% {
       opacity: 0;
-      transform: rotate(45deg) translate(-20px, -20px);
+      transform: rotate(45deg) translate(-16px, -16px);
     }
-
     50% {
       opacity: 1;
     }
-
     100% {
       opacity: 0;
-      transform: rotate(45deg) translate(20px, 20px);
+      transform: rotate(45deg) translate(16px, 16px);
     }
   }
 </style>

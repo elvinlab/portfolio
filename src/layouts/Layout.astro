@@ -1,5 +1,4 @@
 ---
-import "../styles/stars.css";
 import "@fontsource/fira-code";
 import "@fontsource/protest-revolution";
 import Navbar from "../components/navbar/Navbar.astro";
@@ -18,27 +17,21 @@ const { currentLocale } = Astro;
   <head>
     <BaseHead title={title} description={description} />
   </head>
-  <body class="relative text-textLight dark:text-white">
-    <div
-      class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-neutral-100 dark:bg-neutral-950
-      bg-[radial-gradient(100%_50%_at_50%_0%,rgba(0,163,255,0.13)_0,rgba(0,163,255,0)_50%,rgba(0,163,255,0)_100%)]
-      dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
-    >
+  <body class="relative text-slate-900 dark:text-slate-200">
+    <div class="fixed inset-0 z-[-2] bg-slate-50 dark:bg-[#0a0f1e]">
+      <div
+        class="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(94,234,212,0.12),transparent)] dark:bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(94,234,212,0.08),transparent)]"
+      >
+      </div>
+      <div class="mesh-gradient"></div>
     </div>
-
-    <div id="stars" class="relative"></div>
-    <div id="stars2" class="relative"></div>
-    <div id="stars3" class="relative"></div>
 
     <Navbar />
     <main class="main">
       <slot />
     </main>
     <div class="invisible sm:visible" id="cursor"></div>
-    <script
-      is:inline
-      src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"
-    ></script>
+
     <script>
       const theme = (() => {
         if (
@@ -59,15 +52,14 @@ const { currentLocale } = Astro;
         document.documentElement.classList.add("dark");
       }
 
-      // Cursor style
+      // Cursor glow
       const cursorEl: HTMLElement = document.querySelector("#cursor")!;
       const target = { x: 0.5, y: 0.5 };
       const cursor = { x: 0.5, y: 0.5 };
       let raf: number | undefined;
 
-      const lerp = (a: number, b: number, speed: number) => {
-        return (1 - speed) * a + speed * b;
-      };
+      const lerp = (a: number, b: number, speed: number) =>
+        (1 - speed) * a + speed * b;
 
       const update = () => {
         cursor.x = lerp(cursor.x, target.x, 0.1);
@@ -84,20 +76,17 @@ const { currentLocale } = Astro;
           raf = undefined;
           return;
         }
-
         raf = requestAnimationFrame(update);
       };
 
       const handleMouseMove = (event: any) => {
         target.x = event.clientX / window.innerWidth;
         target.y = event.clientY / window.innerHeight;
-
         if (!raf) raf = requestAnimationFrame(update);
       };
 
       window.addEventListener("mousemove", handleMouseMove);
       raf = requestAnimationFrame(update);
-      window.removeEventListener("beforeunload", handleMouseMove);
     </script>
 
     <style is:global>
@@ -109,11 +98,46 @@ const { currentLocale } = Astro;
         font-family: "Fira Code", monospace;
         scroll-behavior: smooth;
       }
+
+      .mesh-gradient {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(94, 234, 212, 0.04) 0%,
+          transparent 40%,
+          rgba(56, 189, 248, 0.03) 60%,
+          transparent 100%
+        );
+        background-size: 200% 200%;
+        animation: meshMove 20s ease infinite;
+      }
+
+      .dark .mesh-gradient {
+        opacity: 1;
+      }
+
+      @keyframes meshMove {
+        0%,
+        100% {
+          background-position: 0% 0%;
+        }
+        25% {
+          background-position: 100% 0%;
+        }
+        50% {
+          background-position: 100% 100%;
+        }
+        75% {
+          background-position: 0% 100%;
+        }
+      }
+
       #cursor {
-        --size: 480px;
+        --size: 500px;
         --x: 0;
         --y: 0;
-
         position: fixed;
         top: 0;
         left: 0;
@@ -125,14 +149,21 @@ const { currentLocale } = Astro;
           calc(100vh * var(--y) - var(--size) / 2),
           0
         );
-        background: #002f55;
-        opacity: 0.2;
-        filter: blur(80px);
-        box-shadow:
-          inset 0 0 0 3px white,
-          0 0 0 1px black;
+        background: radial-gradient(
+          circle,
+          rgba(94, 234, 212, 0.06),
+          transparent 70%
+        );
         pointer-events: none;
-        mix-blend-mode: exclusion;
+        z-index: 1;
+      }
+
+      .dark #cursor {
+        background: radial-gradient(
+          circle,
+          rgba(94, 234, 212, 0.08),
+          transparent 70%
+        );
       }
     </style>
   </body>
